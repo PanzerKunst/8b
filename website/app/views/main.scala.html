@@ -1,5 +1,3 @@
-@(title: String, page: String)(header: Html)(content: Html)(javascript: Html)
-
 <!DOCTYPE html>
 <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
 <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
@@ -9,7 +7,7 @@
 
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>@title</title>
+    <title>Panta Rhei</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
 
@@ -21,24 +19,71 @@
     <link rel="stylesheet" href="@routes.Assets.at("main-v1.css")">
 </head>
 
-<body id="@page">
+<body>
     <div id="container">
-        <header>
-            @header
-        </header>
-
         <div id="content" role="main">
-            @content
-        </div>
+            <h1>Hi! I’m Christophe, an experienced web developer starting freelancing<br />
+                Do you need help with your project?</h1>
 
-        <footer>
-            <a href="http://www.wolf-pac.com/the_plan" target="_blank">The plan</a>
-            <a href="http://www.wolf-pac.com/petition" target="_blank">Petition</a>
-            <a href="http://www.wolf-pac.com/award" target="_blank">Recruit</a>
-            <a href="http://www.wolf-pac.com/flyer" target="_blank">Flyer</a>
-            <a href="http://www.wolf-pac.com/volunteer" target="_blank">Volunteer</a>
-            <a href="http://www.wolf-pac.com/wolf_pac_membership_recurring_payment" target="_blank">Contribute</a>
-        </footer>
+            <h2>I can:
+                <ul>
+                    <li>Take care of your project from idea to launch</li>
+                    <li>Complement your IT team (doing frontend web, backend and/or database development)</li>
+                    <li>... by working remotely, or joining you at your office in Stockholm</li>
+                </ul>
+            </h2>
+
+            <section id="projects">
+                <h2>Some projects I’ve worked on</h2>
+
+                <article>
+                    <img src="" alt="Appear Showroom product website" title="Appear Showroom product website" />
+                    <p>A website showcasing the features of the Appear IQ product. <a>More...</a></p>
+                </article>
+
+                <article>
+                    <img src="" alt="Site Diary tablet webapp" title="Site Diary tablet webapp" />
+                    <p>A cross-platform single-page webapp developed fully in JavaScript, and using native device features such as the camera (via PhoneGap) <a>More...</a></p>
+                </article>
+
+                <article>
+                    <img src="" alt="Train Damage mobile webapp" title="Train Damage mobile webapp" />
+                    <p>A cross-platform single-page webapp developed fully in JavaScript, and using native device features such as the camera (via PhoneGap) <a>More...</a></p>
+                </article>
+            </section>
+
+            <section id="references">
+                <h2>A few references from clients</h2>
+            </section>
+
+            <p>Get in touch! <a href="mailto:christophe@@panta-rhei.io">christophe@@panta-rhei.io</a></p>
+
+            <section id="technologies">
+                <h2>I work with these technologies</h2>
+
+                <article>
+                    <h3>Frontend web</h3>
+                    <p>JavaScript, jQuery, Spine.js, Backbone.js, HTML5, CSS3, Sass, Handlebars</p>
+                </article>
+
+                <article>
+                    <h3>Backend programming</h3>
+                    <p>Java, Scala, web services, Play Framework, .NET framework, PHP</p>
+                </article>
+
+                <article>
+                    <h3>Database</h3>
+                    <p>MySQL, PostgreSQL, Oracle, SQL Server</p>
+                </article>
+
+                <article>
+                    <h3>Packaged solutions</h3>
+                    <p>Wordpress, Shopify</p>
+                </article>
+            </section>
+
+            <p>Don't hesitate to <a href="mailto:christophe@@panta-rhei.io">contact me</a> if you have any question!</p>
+        </div>
     </div>
 
     <!-- Javascripts -->
@@ -51,7 +96,9 @@
         });
     </script>
 
-    @javascript
+    <!--
+        Javascript
+    -->
 
     <!-- Google analytics
     <script>

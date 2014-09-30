@@ -1,0 +1,111 @@
+html {
+  // Always display the vertical scrollbar
+  overflow-y: scroll;
+}
+
+body {
+  /* TODO background-color: $bgColor;
+  background: url('images/bg-content.png') repeat; */
+
+  font-family: "Open-Sans", sans-serif;
+}
+
+#content {
+  h1,
+  h2 {
+    text-align: center;
+    text-rendering: optimizelegibility;
+    font-smoothing: antialiased;
+  }
+
+  h1 {
+    padding: 0 0 $line-height-computed 0;
+    margin: 0;
+
+    font-family: "Oxygen", sans-serif;
+    font-size: $font-size-h2;
+    font-weight: bold;
+
+    @include large-screen {
+      font-size: $font-size-h1;
+      padding-bottom: $line-height-computed;
+    }
+  }
+
+  h2 {
+    margin: $line-height-computed/2 0 $line-height-computed/2 0;
+
+    font-family: "Oxygen", sans-serif;
+    font-size: $font-size-h4;
+
+    @include large-screen {
+      font-size: $font-size-h3;
+    }
+  }
+
+  p,
+  ul,
+  ol,
+  form {
+    margin-bottom: $line-height-computed;
+  }
+
+  p,
+  span,
+  li,
+  a,
+  label {
+    line-height: $line-height-project;
+  }
+
+  p {
+    text-align: justify;
+  }
+
+  li {
+    margin-bottom: $line-height-computed / 2;
+  }
+
+  a,
+  a:visited {
+    text-decoration: none;
+    // TODO color: $actionColor;
+    cursor: pointer;  // To have the pointer on anchors which don't have any href
+  }
+
+  /* TODO a:hover,
+  a:focus {
+    color: $actionColor;
+  } */
+
+  a,
+  span {
+    display: inline-block;  // For "width" declaration to work
+  }
+}
+
+.mdnz-polyfill {
+  display: none;
+}
+
+.list-header {
+  margin-bottom: $line-height-computed / 2;
+}
+
+.centered-contents {
+  text-align: center;
+}
+
+.data-loading {
+  background-image: url("images/loading.gif");
+  width: 48px;
+  height: 48px;
+
+  margin: 0 auto;
+
+  &.small {
+    background-image: url("images/spinner_16x16.gif");
+    width: 16px;
+    height: 16px;
+  }
+}
