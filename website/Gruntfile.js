@@ -27,21 +27,8 @@ module.exports = function (grunt) {
                     curly: true,
                     nonew: true,
                     browser: true,
-                    devel: true
-                }
-            }
-        },
-
-        handlebars: {
-            options: {
-                namespace: 'CBR.Templates',
-                processName: function(filePath) {
-                    return filePath.replace(/^javascripts\/templates\//, '').replace(/\.hbs$/, '');
-                }
-            },
-            all: {
-                files: {
-                    "public/templates.js": ["javascripts/templates/**/*.hbs"]
+                    devel: true,
+                    jquery: true
                 }
             }
         },
@@ -53,6 +40,8 @@ module.exports = function (grunt) {
             dist: {
                 src: [
                     // Libs
+                    "libs/p.js",
+                    "libs/jquery-2.1.1.min.js",
                     "libs/fastclick.js",
                     "libs/lodash.min.js",
 
@@ -66,6 +55,9 @@ module.exports = function (grunt) {
                     // Models
 
                     // Controllers
+                    "javascripts/controllers/base.js",
+                    "javascripts/controllers/citizenHiveOpenProjectsBase.js",
+                    "javascripts/controllers/index.js"
 
                     // Templates
                 ],
@@ -99,6 +91,7 @@ module.exports = function (grunt) {
             build: {
                 src: [
                     // Libs
+                    'libs/h5bp/normalize.css',
 
                     // Rest
                     'public/<%= pkg.name %>.css'

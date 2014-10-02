@@ -22,33 +22,49 @@
 <body>
     <div id="container">
         <div id="content" role="main">
-            <h1>Hi! I’m Christophe, an experienced web developer starting freelancing<br />
-                Do you need help with your project?</h1>
+            <h1><p>Hi! I’m Christophe, a web developer starting freelancing.</p>
+                <p>Do you need help with your project?</p></h1>
 
-            <h2>I can:
-                <ul>
-                    <li>Take care of your project from idea to launch</li>
-                    <li>Complement your IT team (doing frontend web, backend and/or database development)</li>
-                    <li>... by working remotely, or joining you at your office in Stockholm</li>
-                </ul>
-            </h2>
+            <h2>I can</h2>
+            <ul>
+                <li>Take care of your web project from idea to launch</li>
+                <li>Complement your IT team (doing frontend web, backend or database development)</li>
+                <li>... by working remotely, or joining your office in Stockholm</li>
+            </ul>
+
 
             <section id="projects">
-                <h2>Some projects I’ve worked on</h2>
+                <h2>Some projects I have worked on</h2>
 
-                <article>
-                    <img src="" alt="Appear Showroom product website" title="Appear Showroom product website" />
-                    <p>A website showcasing the features of the Appear IQ product. <a>More...</a></p>
+                <article id="appear-showroom">
+                    <img src="/assets/images/appear-showroom/app-list.png" alt="Appear Showroom app list page" />
+                    <h3>Appear Showroom</h3>
+                    <div>
+                        <p>A website showcasing the features of the Appear IQ product.</p>
+                        <a class="show-details">Show more</a>
+                        <a class="hide-details top">Hide details</a>
+                    </div>
+                    <section class="details"></section>
                 </article>
 
-                <article>
-                    <img src="" alt="Site Diary tablet webapp" title="Site Diary tablet webapp" />
-                    <p>A cross-platform single-page webapp developed fully in JavaScript, and using native device features such as the camera (via PhoneGap) <a>More...</a></p>
+                <article id="site-diary">
+                    <img src="" alt="Site Diary tablet webapp" />
+                    <div>
+                        <p>A cross-platform single-page JavaScript webapp, using native device features such as the camera (via Cordova)</p>
+                        <a class="show-details">Show more</a>
+                        <a class="hide-details top">Hide details</a>
+                    </div>
+                    <section class="details"></section>
                 </article>
 
-                <article>
-                    <img src="" alt="Train Damage mobile webapp" title="Train Damage mobile webapp" />
-                    <p>A cross-platform single-page webapp developed fully in JavaScript, and using native device features such as the camera (via PhoneGap) <a>More...</a></p>
+                <article id="train-damage">
+                    <img src="" alt="Train Damage mobile webapp" />
+                    <div>
+                        <p>A cross-platform single-page JavaScript webapp, using native device features such as the camera (via Cordova)</p>
+                        <a class="show-details">Show more</a>
+                        <a class="hide-details top">Hide details</a>
+                    </div>
+                    <section class="details"></section>
                 </article>
             </section>
 
@@ -59,7 +75,7 @@
             <p>Get in touch! <a href="mailto:christophe@@panta-rhei.io">christophe@@panta-rhei.io</a></p>
 
             <section id="technologies">
-                <h2>I work with these technologies</h2>
+                <h2>I know these technologies</h2>
 
                 <article>
                     <h3>Frontend web</h3>
@@ -99,6 +115,13 @@
     <!--
         Javascript
     -->
+    <script type="text/javascript">
+        document.addEventListener("DOMContentLoaded", function () {
+            CBR.Controllers.Index({
+                el: "#content"
+            }).run();
+        });
+    </script>
 
     <!-- Google analytics
     <script>

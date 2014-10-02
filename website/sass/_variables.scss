@@ -2,24 +2,22 @@ $page-side-padding: 1em;
 
 $line-height-project: 1.75em;
 
-$large-screen-min-width: 55em; // 55em @ 14px = 768px
+$large-screen-min-width: 68.57142857142857em; // @ 14px = 960px
 
-$strange-em-difference-for-large-screen-mq-breakpoint: 5.5em;
+$strange-em-difference-for-large-screen-mq-breakpoint: 7.3em;
 
 $large-screen-mq-breakpoint: $large-screen-min-width - $strange-em-difference-for-large-screen-mq-breakpoint;
 
 $sprite-url: 'images/sprite';
 
-$field-width-search-pages: 16em;
-
-$font-size-body-large-screen: 16px;
-
 // From Bootstrap
 $font-size-base: 14px;
 $line-height-base: 1.428571429; // 20/14
 $line-height-computed: floor($font-size-base * $line-height-base); // ~20px
-$font-size-h1: floor($font-size-base * 2.6); // ~36px
-$font-size-h2: floor($font-size-base * 2.15); // ~30px
-$font-size-h3: ceil($font-size-base * 1.7); // ~24px
+$font-size-h1: floor($font-size-base * 3);//42
+$font-size-h2: floor($font-size-base * 2.2);//32
+$font-size-h3: ceil($font-size-base * 1.6);//23
 $font-size-h4: ceil($font-size-base * 1.25); // ~18px
 $carousel-text-shadow: 0 1px 2px rgba(0,0,0,.6);
+
+$font-size-body-large-screen: floor($font-size-base * 1.15);

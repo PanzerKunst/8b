@@ -1,11 +1,4 @@
 @font-face {
-  font-family: 'Oxygen';
-  src: url("fonts/oxygen/Oxygen.otf"); }
-@font-face {
-  font-family: 'Oxygen';
-  src: url("fonts/oxygen/Oxygen-Bold.otf");
-  font-weight: bold; }
-@font-face {
   font-family: 'Open-Sans';
   src: url("fonts/open-sans/OpenSans-Regular.ttf"); }
 @font-face {
@@ -22,89 +15,53 @@
   font-weight: bold;
   font-style: italic; }
 @font-face {
-  font-family: 'Source-Sans-Pro';
-  src: url("fonts/source-sans-pro/SourceSansPro-Regular.otf"); }
+  font-family: 'Open-Sans';
+  src: url("fonts/open-sans/OpenSans-Light.ttf");
+  font-weight: lighter; }
 @font-face {
-  font-family: 'Source-Sans-Pro';
-  src: url("fonts/source-sans-pro/SourceSansPro-Bold.otf");
+  font-family: 'Merriweather-Sans';
+  src: url("fonts/merriweather-sans/MerriweatherSans-Regular.otf"); }
+@font-face {
+  font-family: 'Merriweather-Sans';
+  src: url("fonts/merriweather-sans/MerriweatherSans-Bold.otf");
   font-weight: bold; }
 @font-face {
-  font-family: "Source-Sans-Pro";
-  src: url("fonts/source-sans-pro/SourceSansPro-It.otf");
+  font-family: "Merriweather-Sans";
+  src: url("fonts/merriweather-sans/MerriweatherSans-Italic.otf");
   font-style: italic; }
 @font-face {
-  font-family: "Source-Sans-Pro";
-  src: url("fonts/source-sans-pro/SourceSansPro-BoldIt.otf");
+  font-family: "Merriweather-Sans";
+  src: url("fonts/merriweather-sans/MerriweatherSans-BoldItalic.otf");
   font-weight: bold;
   font-style: italic; }
 @font-face {
-  font-family: 'Clear-Sans';
-  src: url("fonts/clear-sans/ClearSans-Regular.ttf"); }
+  font-family: 'Merriweather-Sans';
+  src: url("fonts/merriweather-sans/MerriweatherSans-Light.otf");
+  font-weight: lighter; }
 @font-face {
-  font-family: 'Clear-Sans';
-  src: url("fonts/clear-sans/ClearSans-Bold.ttf");
+  font-family: 'Merriweather';
+  src: url("fonts/merriweather/Merriweather-Regular.otf"); }
+@font-face {
+  font-family: 'Merriweather';
+  src: url("fonts/merriweather/Merriweather-Bold.otf");
   font-weight: bold; }
 @font-face {
-  font-family: "Clear-Sans";
-  src: url("fonts/clear-sans/ClearSans-Italic.ttf");
+  font-family: "Merriweather";
+  src: url("fonts/merriweather/Merriweather-Italic.otf");
   font-style: italic; }
 @font-face {
-  font-family: "Clear-Sans";
-  src: url("fonts/clear-sans/ClearSans-BoldItalic.ttf");
+  font-family: "Merriweather";
+  src: url("fonts/merriweather/Merriweather-BoldItalic.otf");
   font-weight: bold;
   font-style: italic; }
 @font-face {
-  font-family: 'Fira-sans';
-  src: url("fonts/fira-sans/FiraSansOT-Regular.otf"); }
-@font-face {
-  font-family: 'Fira-sans';
-  src: url("fonts/fira-sans/FiraSansOT-Bold.otf");
-  font-weight: bold; }
-@font-face {
-  font-family: "Fira-sans";
-  src: url("fonts/fira-sans/FiraSansOT-RegularItalic.otf");
-  font-style: italic; }
-@font-face {
-  font-family: "Fira-sans";
-  src: url("fonts/fira-sans/FiraSansOT-BoldItalic.otf");
-  font-weight: bold;
-  font-style: italic; }
-@font-face {
-  font-family: 'Karla';
-  src: url("fonts/karla/Karla-Regular.otf"); }
-@font-face {
-  font-family: 'Karla';
-  src: url("fonts/karla/Karla-Bold.otf");
-  font-weight: bold; }
-@font-face {
-  font-family: "Karla";
-  src: url("fonts/karla/Karla-Italic.otf");
-  font-style: italic; }
-@font-face {
-  font-family: "Karla";
-  src: url("fonts/karla/Karla-BoldItalic.otf");
-  font-weight: bold;
-  font-style: italic; }
-@font-face {
-  font-family: 'Roboto';
-  src: url("fonts/roboto/Roboto-Regular.otf"); }
-@font-face {
-  font-family: 'Roboto';
-  src: url("fonts/roboto/Roboto-Bold.otf");
-  font-weight: bold; }
-@font-face {
-  font-family: "Roboto";
-  src: url("fonts/roboto/Roboto-Italic.otf");
-  font-style: italic; }
-@font-face {
-  font-family: "Roboto";
-  src: url("fonts/roboto/Roboto-BoldItalic.otf");
-  font-weight: bold;
-  font-style: italic; }
+  font-family: 'Merriweather';
+  src: url("fonts/merriweather/Merriweather-Light.otf");
+  font-weight: lighter; }
 #content {
   width: 100%;
   margin: 0 auto;
-  max-width: 55em;
+  max-width: 68.57143em;
   padding-left: 1em;
   padding-right: 1em;
   -webkit-box-sizing: border-box;
@@ -123,9 +80,10 @@ html {
   overflow-y: scroll; }
 
 body {
-  /* TODO background-color: $bgColor;
-  background: url('images/bg-content.png') repeat; */
-  font-family: "Open-Sans", sans-serif; }
+  background: url("images/NSLinenBackgroundPattern.png") repeat #f9f9f9;
+  font-family: "Merriweather-Sans", serif;
+  color: #393D51;
+  font-size: 14px; }
 
 #content {
   /* TODO a:hover,
@@ -134,26 +92,31 @@ body {
   } */ }
   #content h1,
   #content h2 {
-    text-align: center;
     text-rendering: optimizelegibility;
-    font-smoothing: antialiased; }
+    font-smoothing: antialiased;
+    font-family: "Merriweather", sans-serif;
+    font-weight: lighter; }
   #content h1 {
     padding: 0 0 20px 0;
     margin: 0;
-    font-family: "Oxygen", sans-serif;
-    font-size: 30px;
-    font-weight: bold; }
-    @media screen and (min-width: 49.5em) {
+    font-size: 30px; }
+    @media screen and (min-width: 61.27143em) {
       #content h1 {
-        font-size: 36px;
+        font-size: 42px;
         padding-bottom: 20px; } }
   #content h2 {
     margin: 10px 0 10px 0;
-    font-family: "Oxygen", sans-serif;
-    font-size: 18px; }
-    @media screen and (min-width: 49.5em) {
+    font-size: 23px; }
+    @media screen and (min-width: 61.27143em) {
       #content h2 {
-        font-size: 24px; } }
+        font-size: 30px; } }
+  #content h3 {
+    font-size: 18px; }
+    @media screen and (min-width: 61.27143em) {
+      #content h3 {
+        font-size: 23px; } }
+  #content h4 {
+    font-size: 18px; }
   #content p,
   #content ul,
   #content ol,
@@ -165,8 +128,17 @@ body {
   #content a,
   #content label {
     line-height: 1.75em; }
+    @media screen and (min-width: 61.27143em) {
+      #content p,
+      #content span,
+      #content li,
+      #content a,
+      #content label {
+        font-size: 16px; } }
   #content p {
     text-align: justify; }
+  #content ul {
+    padding-left: 1.5em; }
   #content li {
     margin-bottom: 10px; }
   #content a,
@@ -196,14 +168,25 @@ body {
     width: 16px;
     height: 16px; }
 
-.alert.floating {
-  position: fixed;
-  left: 50%;
-  margin-top: -2.5em;
-  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.6);
-  padding: 3px 7px 4px 7px;
-  border-radius: 3px;
-  text-align: center;
+#content h1 {
+  margin: 2em auto 1em auto;
+  max-width: 18.5em; }
+  #content h1 > p {
+    margin-top: 0;
+    font-size: inherit;
+    text-align: center;
+    line-height: 1.25em; }
+#content #projects img {
+  box-shadow: 0 0 3px #4d4d4d;
+  background-color: red;
+  -webkit-transition: all 200ms ease-in-out;
+  -moz-transition: all 200ms ease-in-out;
+  transition: all 200ms ease-in-out; }
+  #content #projects img:hover {
+    opacity: 0.8;
+    box-shadow: none; }
+#content .hide-details.top,
+#content .details {
   display: none; }
 
 /*# sourceMappingURL=main.css.map */
