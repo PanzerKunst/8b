@@ -22,19 +22,19 @@ body {
   }
 
   h1 {
-    padding: 0 0 $line-height-computed 0;
+    padding: 0 0 $line-height-computed 0; // TODO: in em
     margin: 0;
 
     font-size: $font-size-h2;
 
     @include large-screen {
       font-size: $font-size-h1;
-      padding-bottom: $line-height-computed;
+      padding-bottom: $line-height-computed; // TODO: in em
     }
   }
 
   h2 {
-    margin: $line-height-computed/2 0 $line-height-computed/2 0;
+    margin: $line-height-computed * 3 0 $line-height-computed/2 0; // TODO: in em
 
     font-size: $font-size-h3;
 
@@ -44,6 +44,8 @@ body {
   }
 
   h3 {
+    margin-bottom: $line-height-computed/2; // TODO: in em
+
     font-size: $font-size-h4;
 
     @include large-screen {
@@ -59,7 +61,7 @@ body {
   ul,
   ol,
   form {
-    margin-bottom: $line-height-computed;
+    margin: 0 0 $line-height-computed 0; // TODO: in em
   }
 
   p,
@@ -83,7 +85,7 @@ body {
   }
 
   li {
-    margin-bottom: $line-height-computed / 2;
+    margin-bottom: $line-height-computed / 2; // TODO: in em
   }
 
   a,
@@ -109,7 +111,7 @@ body {
 }
 
 .list-header {
-  margin-bottom: $line-height-computed / 2;
+  margin-bottom: $line-height-computed / 2; // TODO: in em
 }
 
 .centered-contents {

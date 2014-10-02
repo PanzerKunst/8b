@@ -1,34 +1,56 @@
-#content {
-  h1 {
-    margin: 2em auto 1em auto;
-    max-width: 18.5em;
+$project-article-separator-width: 2em;
 
-    > p {
-      margin-top: 0;
+#index {
+  #content {
+    h1 {
+      margin: 2em auto 0 auto;
+      padding-bottom: 0;
+      max-width: 18.5em;
 
-      font-size: inherit;
-      text-align: center;
-      line-height: 1.25em;
-    }
-  }
+      > p {
+        margin-top: 0;
 
-  #projects {
-    img {
-      box-shadow: 0 0 3px lighten(black, 30%);
-
-      background-color: red;
-
-      @include transition (all 200ms ease-in-out);
-
-      &:hover {
-        opacity: 0.8;
-        box-shadow: none;
+        font-size: inherit;
+        text-align: center;
+        line-height: 1.25em;
       }
     }
-  }
 
-  .hide-details.top,
-  .details {
-    display: none;
+    #projects {
+      article {
+        max-width: ($large-screen-min-width - 2 * $page-side-padding) / 2 - $project-article-separator-width / 2;
+
+        @include large-screen {
+          display: inline-block;
+        }
+
+        @media screen and (min-width: $large-screen-mq-breakpoint - $project-article-separator-width) {
+          &:nth-child(odd) {
+            padding-right: $project-article-separator-width;
+          }
+        }
+      }
+
+      img {
+        box-shadow: 0 0 3px lighten(black, 30%);
+
+        @include transition(all 200ms ease-in-out);
+
+        &:hover {
+          opacity: 0.8;
+          box-shadow: none;
+        }
+      }
+    }
+
+    .project-pic-anchor {
+      // Otherwise the anchor expands beyond $large-screen-min-width
+      display: block;
+    }
+
+    .hide-details.top,
+    .details {
+      display: none;
+    }
   }
 }

@@ -1,0 +1,46 @@
+######################
+# Add missing packages
+######################
+
+$ sudo apt-get install nginx
+
+
+############
+# Web server
+############
+
+$ sudo cp /etc/nginx/sites-available/openprojects /etc/nginx/sites-available/pantarhei
+
+$ sudo vi /etc/nginx/sites-available/pantarhei
+server {
+        listen 80;
+        server_name panta-rhei.reportingfromtheborderland.net;
+
+        location / {
+                proxy_pass http://localhost:9003;
+                proxy_next_upstream error timeout invalid_header http_500 http_502 http_503 http_504;
+                proxy_redirect off;
+                proxy_buffering off;
+                proxy_set_header Host $host;
+                proxy_set_header X-Real-IP $remote_addr;
+                proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+        }
+}
+
+$ sudo ln -s /etc/nginx/sites-available/pantarhei /etc/nginx/sites-enabled/pantarhei
+
+$ sudo service nginx restart
+
+$ cd ~/panta-rhei/website
+$ dos2unix activator
+$ chmod u+x activator
+
+##################
+# Start web server
+##################
+
+Inside app dir, run:
+$ ./activator
+$ start -Dhttp.port=9003
+
+("run" for auto reload, "start" for better perf)

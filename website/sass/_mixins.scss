@@ -1,9 +1,3 @@
-@mixin medium-screen {
-  @media screen and (min-width: $medium-screen-mq-breakpoint) {
-    @content;
-  }
-}
-
 @mixin large-screen {
   @media screen and (min-width: $large-screen-mq-breakpoint) {
     @content;

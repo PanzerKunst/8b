@@ -12,8 +12,6 @@ $sprite-url: 'images/sprite';
 
 // From Bootstrap
 $font-size-base: 14px;
-$line-height-base: 1.428571429; // 20/14
-$line-height-computed: floor($font-size-base * $line-height-base); // ~20px
 $font-size-h1: floor($font-size-base * 3);//42
 $font-size-h2: floor($font-size-base * 2.2);//32
 $font-size-h3: ceil($font-size-base * 1.6);//23

@@ -1,192 +1,83 @@
-@font-face {
-  font-family: 'Open-Sans';
-  src: url("fonts/open-sans/OpenSans-Regular.ttf"); }
-@font-face {
-  font-family: 'Open-Sans';
-  src: url("fonts/open-sans/OpenSans-Bold.ttf");
-  font-weight: bold; }
-@font-face {
-  font-family: "Open-Sans";
-  src: url("fonts/open-sans/OpenSans-Italic.ttf");
-  font-style: italic; }
-@font-face {
-  font-family: "Open-Sans";
-  src: url("fonts/open-sans/OpenSans-BoldItalic.ttf");
-  font-weight: bold;
-  font-style: italic; }
-@font-face {
-  font-family: 'Open-Sans';
-  src: url("fonts/open-sans/OpenSans-Light.ttf");
-  font-weight: lighter; }
-@font-face {
-  font-family: 'Merriweather-Sans';
-  src: url("fonts/merriweather-sans/MerriweatherSans-Regular.otf"); }
-@font-face {
-  font-family: 'Merriweather-Sans';
-  src: url("fonts/merriweather-sans/MerriweatherSans-Bold.otf");
-  font-weight: bold; }
-@font-face {
-  font-family: "Merriweather-Sans";
-  src: url("fonts/merriweather-sans/MerriweatherSans-Italic.otf");
-  font-style: italic; }
-@font-face {
-  font-family: "Merriweather-Sans";
-  src: url("fonts/merriweather-sans/MerriweatherSans-BoldItalic.otf");
-  font-weight: bold;
-  font-style: italic; }
-@font-face {
-  font-family: 'Merriweather-Sans';
-  src: url("fonts/merriweather-sans/MerriweatherSans-Light.otf");
-  font-weight: lighter; }
-@font-face {
-  font-family: 'Merriweather';
-  src: url("fonts/merriweather/Merriweather-Regular.otf"); }
-@font-face {
-  font-family: 'Merriweather';
-  src: url("fonts/merriweather/Merriweather-Bold.otf");
-  font-weight: bold; }
-@font-face {
-  font-family: "Merriweather";
-  src: url("fonts/merriweather/Merriweather-Italic.otf");
-  font-style: italic; }
-@font-face {
-  font-family: "Merriweather";
-  src: url("fonts/merriweather/Merriweather-BoldItalic.otf");
-  font-weight: bold;
-  font-style: italic; }
-@font-face {
-  font-family: 'Merriweather';
-  src: url("fonts/merriweather/Merriweather-Light.otf");
-  font-weight: lighter; }
-#content {
-  width: 100%;
-  margin: 0 auto;
-  max-width: 68.57143em;
-  padding-left: 1em;
-  padding-right: 1em;
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box; }
+/*
+Error: Undefined variable: "$line-height-computed".
+        on line 25 of sass/_base.scss
+        from line 9 of sass/main.scss
 
-.lt-ie9 #content {
-  width: 900px;
-  padding-left: 30px;
-  padding-right: 30px; }
-
-img {
-  max-width: 100%; }
-
-html {
-  overflow-y: scroll; }
-
-body {
-  background: url("images/NSLinenBackgroundPattern.png") repeat #f9f9f9;
-  font-family: "Merriweather-Sans", serif;
-  color: #393D51;
-  font-size: 14px; }
-
-#content {
-  /* TODO a:hover,
-  a:focus {
-    color: $actionColor;
-  } */ }
-  #content h1,
-  #content h2 {
-    text-rendering: optimizelegibility;
-    font-smoothing: antialiased;
-    font-family: "Merriweather", sans-serif;
-    font-weight: lighter; }
-  #content h1 {
-    padding: 0 0 20px 0;
-    margin: 0;
-    font-size: 30px; }
-    @media screen and (min-width: 61.27143em) {
-      #content h1 {
-        font-size: 42px;
-        padding-bottom: 20px; } }
-  #content h2 {
-    margin: 10px 0 10px 0;
-    font-size: 23px; }
-    @media screen and (min-width: 61.27143em) {
-      #content h2 {
-        font-size: 30px; } }
-  #content h3 {
-    font-size: 18px; }
-    @media screen and (min-width: 61.27143em) {
-      #content h3 {
-        font-size: 23px; } }
-  #content h4 {
-    font-size: 18px; }
-  #content p,
-  #content ul,
-  #content ol,
-  #content form {
-    margin-bottom: 20px; }
-  #content p,
-  #content span,
-  #content li,
-  #content a,
-  #content label {
-    line-height: 1.75em; }
-    @media screen and (min-width: 61.27143em) {
-      #content p,
-      #content span,
-      #content li,
-      #content a,
-      #content label {
-        font-size: 16px; } }
-  #content p {
-    text-align: justify; }
-  #content ul {
-    padding-left: 1.5em; }
-  #content li {
-    margin-bottom: 10px; }
-  #content a,
-  #content a:visited {
-    text-decoration: none;
-    cursor: pointer; }
-  #content a,
-  #content span {
-    display: inline-block; }
-
-.mdnz-polyfill {
-  display: none; }
-
-.list-header {
-  margin-bottom: 10px; }
-
-.centered-contents {
-  text-align: center; }
-
-.data-loading {
-  background-image: url("images/loading.gif");
-  width: 48px;
-  height: 48px;
-  margin: 0 auto; }
-  .data-loading.small {
-    background-image: url("images/spinner_16x16.gif");
-    width: 16px;
-    height: 16px; }
-
-#content h1 {
-  margin: 2em auto 1em auto;
-  max-width: 18.5em; }
-  #content h1 > p {
-    margin-top: 0;
-    font-size: inherit;
-    text-align: center;
-    line-height: 1.25em; }
-#content #projects img {
-  box-shadow: 0 0 3px #4d4d4d;
-  background-color: red;
-  -webkit-transition: all 200ms ease-in-out;
-  -moz-transition: all 200ms ease-in-out;
-  transition: all 200ms ease-in-out; }
-  #content #projects img:hover {
-    opacity: 0.8;
-    box-shadow: none; }
-#content .hide-details.top,
-#content .details {
-  display: none; }
-
-/*# sourceMappingURL=main.css.map */
+Backtrace:
+sass/_base.scss:25
+sass/main.scss:9
+C:/ProgramFiles/Ruby21-x64/lib/ruby/gems/2.1.0/gems/sass-3.4.5/lib/sass/script/tree/variable.rb:49:in `_perform'
+C:/ProgramFiles/Ruby21-x64/lib/ruby/gems/2.1.0/gems/sass-3.4.5/lib/sass/script/tree/node.rb:50:in `perform'
+C:/ProgramFiles/Ruby21-x64/lib/ruby/gems/2.1.0/gems/sass-3.4.5/lib/sass/script/tree/list_literal.rb:62:in `block in _perform'
+C:/ProgramFiles/Ruby21-x64/lib/ruby/gems/2.1.0/gems/sass-3.4.5/lib/sass/script/tree/list_literal.rb:62:in `map'
+C:/ProgramFiles/Ruby21-x64/lib/ruby/gems/2.1.0/gems/sass-3.4.5/lib/sass/script/tree/list_literal.rb:62:in `_perform'
+C:/ProgramFiles/Ruby21-x64/lib/ruby/gems/2.1.0/gems/sass-3.4.5/lib/sass/script/tree/node.rb:50:in `perform'
+C:/ProgramFiles/Ruby21-x64/lib/ruby/gems/2.1.0/gems/sass-3.4.5/lib/sass/tree/visitors/perform.rb:384:in `visit_prop'
+C:/ProgramFiles/Ruby21-x64/lib/ruby/gems/2.1.0/gems/sass-3.4.5/lib/sass/tree/visitors/base.rb:36:in `visit'
+C:/ProgramFiles/Ruby21-x64/lib/ruby/gems/2.1.0/gems/sass-3.4.5/lib/sass/tree/visitors/perform.rb:158:in `block in visit'
+C:/ProgramFiles/Ruby21-x64/lib/ruby/gems/2.1.0/gems/sass-3.4.5/lib/sass/stack.rb:79:in `block in with_base'
+C:/ProgramFiles/Ruby21-x64/lib/ruby/gems/2.1.0/gems/sass-3.4.5/lib/sass/stack.rb:115:in `with_frame'
+C:/ProgramFiles/Ruby21-x64/lib/ruby/gems/2.1.0/gems/sass-3.4.5/lib/sass/stack.rb:79:in `with_base'
+C:/ProgramFiles/Ruby21-x64/lib/ruby/gems/2.1.0/gems/sass-3.4.5/lib/sass/tree/visitors/perform.rb:158:in `visit'
+C:/ProgramFiles/Ruby21-x64/lib/ruby/gems/2.1.0/gems/sass-3.4.5/lib/sass/tree/visitors/perform.rb:420:in `block (2 levels) in visit_rule'
+C:/ProgramFiles/Ruby21-x64/lib/ruby/gems/2.1.0/gems/sass-3.4.5/lib/sass/tree/visitors/perform.rb:420:in `map'
+C:/ProgramFiles/Ruby21-x64/lib/ruby/gems/2.1.0/gems/sass-3.4.5/lib/sass/tree/visitors/perform.rb:420:in `block in visit_rule'
+C:/ProgramFiles/Ruby21-x64/lib/ruby/gems/2.1.0/gems/sass-3.4.5/lib/sass/tree/visitors/perform.rb:179:in `with_environment'
+C:/ProgramFiles/Ruby21-x64/lib/ruby/gems/2.1.0/gems/sass-3.4.5/lib/sass/tree/visitors/perform.rb:418:in `visit_rule'
+C:/ProgramFiles/Ruby21-x64/lib/ruby/gems/2.1.0/gems/sass-3.4.5/lib/sass/tree/visitors/base.rb:36:in `visit'
+C:/ProgramFiles/Ruby21-x64/lib/ruby/gems/2.1.0/gems/sass-3.4.5/lib/sass/tree/visitors/perform.rb:158:in `block in visit'
+C:/ProgramFiles/Ruby21-x64/lib/ruby/gems/2.1.0/gems/sass-3.4.5/lib/sass/stack.rb:79:in `block in with_base'
+C:/ProgramFiles/Ruby21-x64/lib/ruby/gems/2.1.0/gems/sass-3.4.5/lib/sass/stack.rb:115:in `with_frame'
+C:/ProgramFiles/Ruby21-x64/lib/ruby/gems/2.1.0/gems/sass-3.4.5/lib/sass/stack.rb:79:in `with_base'
+C:/ProgramFiles/Ruby21-x64/lib/ruby/gems/2.1.0/gems/sass-3.4.5/lib/sass/tree/visitors/perform.rb:158:in `visit'
+C:/ProgramFiles/Ruby21-x64/lib/ruby/gems/2.1.0/gems/sass-3.4.5/lib/sass/tree/visitors/perform.rb:420:in `block (2 levels) in visit_rule'
+C:/ProgramFiles/Ruby21-x64/lib/ruby/gems/2.1.0/gems/sass-3.4.5/lib/sass/tree/visitors/perform.rb:420:in `map'
+C:/ProgramFiles/Ruby21-x64/lib/ruby/gems/2.1.0/gems/sass-3.4.5/lib/sass/tree/visitors/perform.rb:420:in `block in visit_rule'
+C:/ProgramFiles/Ruby21-x64/lib/ruby/gems/2.1.0/gems/sass-3.4.5/lib/sass/tree/visitors/perform.rb:179:in `with_environment'
+C:/ProgramFiles/Ruby21-x64/lib/ruby/gems/2.1.0/gems/sass-3.4.5/lib/sass/tree/visitors/perform.rb:418:in `visit_rule'
+C:/ProgramFiles/Ruby21-x64/lib/ruby/gems/2.1.0/gems/sass-3.4.5/lib/sass/tree/visitors/base.rb:36:in `visit'
+C:/ProgramFiles/Ruby21-x64/lib/ruby/gems/2.1.0/gems/sass-3.4.5/lib/sass/tree/visitors/perform.rb:158:in `block in visit'
+C:/ProgramFiles/Ruby21-x64/lib/ruby/gems/2.1.0/gems/sass-3.4.5/lib/sass/stack.rb:79:in `block in with_base'
+C:/ProgramFiles/Ruby21-x64/lib/ruby/gems/2.1.0/gems/sass-3.4.5/lib/sass/stack.rb:115:in `with_frame'
+C:/ProgramFiles/Ruby21-x64/lib/ruby/gems/2.1.0/gems/sass-3.4.5/lib/sass/stack.rb:79:in `with_base'
+C:/ProgramFiles/Ruby21-x64/lib/ruby/gems/2.1.0/gems/sass-3.4.5/lib/sass/tree/visitors/perform.rb:158:in `visit'
+C:/ProgramFiles/Ruby21-x64/lib/ruby/gems/2.1.0/gems/sass-3.4.5/lib/sass/tree/visitors/perform.rb:315:in `block (2 levels) in visit_import'
+C:/ProgramFiles/Ruby21-x64/lib/ruby/gems/2.1.0/gems/sass-3.4.5/lib/sass/tree/visitors/perform.rb:315:in `map'
+C:/ProgramFiles/Ruby21-x64/lib/ruby/gems/2.1.0/gems/sass-3.4.5/lib/sass/tree/visitors/perform.rb:315:in `block in visit_import'
+C:/ProgramFiles/Ruby21-x64/lib/ruby/gems/2.1.0/gems/sass-3.4.5/lib/sass/stack.rb:88:in `block in with_import'
+C:/ProgramFiles/Ruby21-x64/lib/ruby/gems/2.1.0/gems/sass-3.4.5/lib/sass/stack.rb:115:in `with_frame'
+C:/ProgramFiles/Ruby21-x64/lib/ruby/gems/2.1.0/gems/sass-3.4.5/lib/sass/stack.rb:88:in `with_import'
+C:/ProgramFiles/Ruby21-x64/lib/ruby/gems/2.1.0/gems/sass-3.4.5/lib/sass/tree/visitors/perform.rb:312:in `visit_import'
+C:/ProgramFiles/Ruby21-x64/lib/ruby/gems/2.1.0/gems/sass-3.4.5/lib/sass/tree/visitors/base.rb:36:in `visit'
+C:/ProgramFiles/Ruby21-x64/lib/ruby/gems/2.1.0/gems/sass-3.4.5/lib/sass/tree/visitors/perform.rb:158:in `block in visit'
+C:/ProgramFiles/Ruby21-x64/lib/ruby/gems/2.1.0/gems/sass-3.4.5/lib/sass/stack.rb:79:in `block in with_base'
+C:/ProgramFiles/Ruby21-x64/lib/ruby/gems/2.1.0/gems/sass-3.4.5/lib/sass/stack.rb:115:in `with_frame'
+C:/ProgramFiles/Ruby21-x64/lib/ruby/gems/2.1.0/gems/sass-3.4.5/lib/sass/stack.rb:79:in `with_base'
+C:/ProgramFiles/Ruby21-x64/lib/ruby/gems/2.1.0/gems/sass-3.4.5/lib/sass/tree/visitors/perform.rb:158:in `visit'
+C:/ProgramFiles/Ruby21-x64/lib/ruby/gems/2.1.0/gems/sass-3.4.5/lib/sass/tree/visitors/base.rb:52:in `block in visit_children'
+C:/ProgramFiles/Ruby21-x64/lib/ruby/gems/2.1.0/gems/sass-3.4.5/lib/sass/tree/visitors/base.rb:52:in `map'
+C:/ProgramFiles/Ruby21-x64/lib/ruby/gems/2.1.0/gems/sass-3.4.5/lib/sass/tree/visitors/base.rb:52:in `visit_children'
+C:/ProgramFiles/Ruby21-x64/lib/ruby/gems/2.1.0/gems/sass-3.4.5/lib/sass/tree/visitors/perform.rb:167:in `block in visit_children'
+C:/ProgramFiles/Ruby21-x64/lib/ruby/gems/2.1.0/gems/sass-3.4.5/lib/sass/tree/visitors/perform.rb:179:in `with_environment'
+C:/ProgramFiles/Ruby21-x64/lib/ruby/gems/2.1.0/gems/sass-3.4.5/lib/sass/tree/visitors/perform.rb:166:in `visit_children'
+C:/ProgramFiles/Ruby21-x64/lib/ruby/gems/2.1.0/gems/sass-3.4.5/lib/sass/tree/visitors/base.rb:36:in `block in visit'
+C:/ProgramFiles/Ruby21-x64/lib/ruby/gems/2.1.0/gems/sass-3.4.5/lib/sass/tree/visitors/perform.rb:186:in `visit_root'
+C:/ProgramFiles/Ruby21-x64/lib/ruby/gems/2.1.0/gems/sass-3.4.5/lib/sass/tree/visitors/base.rb:36:in `visit'
+C:/ProgramFiles/Ruby21-x64/lib/ruby/gems/2.1.0/gems/sass-3.4.5/lib/sass/tree/visitors/perform.rb:157:in `visit'
+C:/ProgramFiles/Ruby21-x64/lib/ruby/gems/2.1.0/gems/sass-3.4.5/lib/sass/tree/visitors/perform.rb:8:in `visit'
+C:/ProgramFiles/Ruby21-x64/lib/ruby/gems/2.1.0/gems/sass-3.4.5/lib/sass/tree/root_node.rb:36:in `css_tree'
+C:/ProgramFiles/Ruby21-x64/lib/ruby/gems/2.1.0/gems/sass-3.4.5/lib/sass/tree/root_node.rb:29:in `render_with_sourcemap'
+C:/ProgramFiles/Ruby21-x64/lib/ruby/gems/2.1.0/gems/sass-3.4.5/lib/sass/engine.rb:368:in `_render_with_sourcemap'
+C:/ProgramFiles/Ruby21-x64/lib/ruby/gems/2.1.0/gems/sass-3.4.5/lib/sass/engine.rb:285:in `render_with_sourcemap'
+C:/ProgramFiles/Ruby21-x64/lib/ruby/gems/2.1.0/gems/sass-3.4.5/lib/sass/exec/sass_scss.rb:396:in `run'
+C:/ProgramFiles/Ruby21-x64/lib/ruby/gems/2.1.0/gems/sass-3.4.5/lib/sass/exec/sass_scss.rb:62:in `process_result'
+C:/ProgramFiles/Ruby21-x64/lib/ruby/gems/2.1.0/gems/sass-3.4.5/lib/sass/exec/base.rb:52:in `parse'
+C:/ProgramFiles/Ruby21-x64/lib/ruby/gems/2.1.0/gems/sass-3.4.5/lib/sass/exec/base.rb:19:in `parse!'
+C:/ProgramFiles/Ruby21-x64/lib/ruby/gems/2.1.0/gems/sass-3.4.5/bin/sass:13:in `<top (required)>'
+C:/ProgramFiles/Ruby21-x64/bin/sass:23:in `load'
+C:/ProgramFiles/Ruby21-x64/bin/sass:23:in `<main>'
+*/
+body:before {
+  white-space: pre;
+  font-family: monospace;
+  content: "Error: Undefined variable: \"$line-height-computed\".\A         on line 25 of sass/_base.scss\A         from line 9 of sass/main.scss"; }

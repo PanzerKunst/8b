@@ -1,0 +1,97 @@
+@main("Panta Rhei", "index") {
+<!--
+    Content
+-->
+<h1><p>Hi! I’m Christophe, a web developer starting freelancing.</p>
+
+    <p>Do you need help with your project?</p></h1>
+
+<h2>I can</h2>
+<ul>
+    <li>Take care of your web project from idea to launch</li>
+    <li>Complement your IT team (doing frontend web, backend or database development)</li>
+    <li>... by working remotely, or joining your office in Stockholm</li>
+</ul>
+
+<section id="projects">
+    <h2>Some projects I have worked on</h2>
+
+    <div>
+        <article id="appear-showroom">
+            <a class="project-pic-anchor" href="/projects/appear-showroom">
+                <img src="/assets/images/appear-showroom/app-list.png" alt="Appear Showroom app list page"/>
+            </a>
+
+            <h3>Appear Showroom</h3>
+
+            <div>
+                <p>A website showcasing the features of the Appear IQ product.</p>
+                <a href="/projects/appear-showroom" class="more-details">More details</a>
+            </div>
+        </article><!--
+
+     --><article id="site-diary">
+            <a class="project-pic-anchor" href="/projects/site-diary">
+                <img src="/assets/images/site-diary/event-detail.png" alt="Site Diary event detail view"/>
+            </a>
+
+            <h3>Site Diary</h3>
+
+            <div>
+                <p>A cross-platform single-page JavaScript webapp, using native device features such as the camera (via
+                    Cordova)</p>
+                <a href="/projects/site-diary" class="more-details">More details</a>
+            </div>
+        </article>
+    </div>
+</section>
+
+<section id="references">
+    <h2>A few references from clients</h2>
+</section>
+
+<p>Get in touch! <a href="mailto:christophe@@panta-rhei.io">christophe@@panta-rhei.io</a></p>
+
+<section id="technologies">
+    <h2>I know these technologies</h2>
+
+    <article>
+        <h3>Frontend web</h3>
+
+        <p>JavaScript, jQuery, Spine.js, Backbone.js, HTML5, CSS3, Sass, Handlebars</p>
+    </article>
+
+    <article>
+        <h3>Backend programming</h3>
+
+        <p>Java, Scala, web services, Play Framework, .NET framework, PHP</p>
+    </article>
+
+    <article>
+        <h3>Database</h3>
+
+        <p>MySQL, PostgreSQL, Oracle, SQL Server</p>
+    </article>
+
+    <article>
+        <h3>Packaged solutions</h3>
+
+        <p>Wordpress, Shopify</p>
+    </article>
+</section>
+
+<p>Don't hesitate to <a href="mailto:christophe@@panta-rhei.io">contact me</a> if you have any question!</p>
+
+} {
+<!--
+    Javascript
+-->
+<script type="text/javascript">
+    document.addEventListener("DOMContentLoaded", function () {
+        new CBR.Controllers.Index({
+            el: "#content"
+        }).run();
+    });
+</script>
+
+}
