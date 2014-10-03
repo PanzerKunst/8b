@@ -1,11 +1,13 @@
-$project-article-separator-width: 2em;
-
 #index {
   #content {
     h1 {
-      margin: 2em auto 0 auto;
+      margin: 1em auto 0 auto;
       padding-bottom: 0;
       max-width: 18.5em;
+
+      @include large-screen {
+        margin-top: $big-spacer-height;
+      }
 
       > p {
         margin-top: 0;
@@ -16,12 +18,19 @@ $project-article-separator-width: 2em;
       }
     }
 
+    #i-can-list {
+      @include paragraph;
+    }
+
     #projects {
       article {
-        max-width: ($large-screen-min-width - 2 * $page-side-padding) / 2 - $project-article-separator-width / 2;
-
         @include large-screen {
+          max-width: $project-article-width;
+
           display: inline-block;
+
+          // Otherwise the element is aligned to the bottom because of display inline-block
+          vertical-align: top;
         }
 
         @media screen and (min-width: $large-screen-mq-breakpoint - $project-article-separator-width) {
@@ -31,14 +40,15 @@ $project-article-separator-width: 2em;
         }
       }
 
-      img {
-        box-shadow: 0 0 3px lighten(black, 30%);
+      h3 {
+        margin-top: 0;
+      }
 
-        @include transition(all 200ms ease-in-out);
-
-        &:hover {
-          opacity: 0.8;
-          box-shadow: none;
+      @include large-screen {
+        img {
+          &:hover {
+            opacity: 0.8;
+          }
         }
       }
     }
@@ -48,9 +58,18 @@ $project-article-separator-width: 2em;
       display: block;
     }
 
-    .hide-details.top,
-    .details {
-      display: none;
+    #technologies {
+      > article {
+        @include paragraph;
+      }
+
+      h3 {
+        margin-bottom: 0.2em;
+      }
+
+      p {
+        margin-top: 0;
+      }
     }
   }
 }
