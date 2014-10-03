@@ -7,105 +7,87 @@ body {
   background: url("images/NSLinenBackgroundPattern.png") repeat #f9f9f9;
 
   font-family: "Merriweather-Sans", serif;
-  color: darken( $action-color, 20%);
+  color: darken($action-color, 20%);
   font-size: $font-size-base;
 }
 
-#content {
-  h1,
-  h2 {
-    text-rendering: optimizelegibility;
-    font-smoothing: antialiased;
+h1,
+h2 {
+  text-rendering: optimizelegibility;
+  font-smoothing: antialiased;
 
-    font-family: "Merriweather", sans-serif;
-    font-weight: lighter;
+  font-family: "Merriweather", sans-serif;
+  font-weight: lighter;
+}
+
+h1 {
+  font-size: $font-size-h2;
+
+  @include large-screen {
+    font-size: $font-size-h1;
+    margin-top: $big-spacer-height;
   }
 
-  h1 {
+  text-align: center;
+}
+
+h2 {
+  font-size: $font-size-h3;
+
+  @include large-screen {
     font-size: $font-size-h2;
-
-    @include large-screen {
-      font-size: $font-size-h1;
-    }
-
-    text-align: center;
   }
+}
 
-  h2 {
+h3 {
+  font-size: $font-size-h4;
+
+  @include large-screen {
     font-size: $font-size-h3;
-
-    @include large-screen {
-      font-size: $font-size-h2;
-    }
-
-    text-align: center;
   }
 
-  h3 {
-    font-size: $font-size-h4;
+  margin-bottom: 0.5em;
+}
 
-    @include large-screen {
-      font-size: $font-size-h3;
-    }
+h4 {
+  font-size: $font-size-h4;
+}
 
-    margin-bottom: 0.5em;
+p,
+span,
+li,
+a,
+label {
+  line-height: $line-height-project;
+
+  @include large-screen {
+    font-size: $font-size-body-large-screen;
   }
+}
 
-  h4 {
-    font-size: $font-size-h4;
-  }
+p {
+  text-align: justify;
+}
 
-  /* TODO h1,
-  h2,
-  h3,
-  h4,
-  p,
-  ul,
-  ol,
-  form {
-    margin-top: 0;
-  } */
+ul {
+  padding-left: 1.5em;
+}
 
-  p,
-  span,
-  li,
-  a,
-  label {
-    line-height: $line-height-project;
+a,
+a:visited {
+  color: $action-color;
+  cursor: pointer; // To have the pointer on anchors which don't have any href
+}
 
-    @include large-screen {
-      font-size: $font-size-body-large-screen;
-    }
-  }
+a:hover,
+a:focus {
+  color: $action-color;
+  text-decoration: none;
+}
 
-  p {
-    text-align: justify;
-  }
-
-  ul {
-    padding-left: 1.5em;
-  }
-
-  /* TODO li {
-    margin-bottom: $line-height-computed / 2; // TODO: in em
-  } */
-
-  a,
-  a:visited {
-    color: $action-color;
-    cursor: pointer;  // To have the pointer on anchors which don't have any href
-  }
-
-  a:hover,
-  a:focus {
-    color: $action-color;
-    text-decoration: none;
-  }
-
-  a,
-  span {
-    display: inline-block;  // For "width" declaration to work
-  }
+a,
+span {
+  display: inline-block; // For "width" declaration to work
 }
 
 .centered-contents {

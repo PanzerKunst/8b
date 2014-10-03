@@ -1,33 +1,38 @@
-@mixin paragraph {
-  @include large-screen {
-    max-width: $paragraph-width-large-screen;
-    margin: 0 auto;
+@mixin page-max-width {
+  #content {
+    @include large-screen {
+      // In some cases we don’t want the size to exceed a certain width on bigger screens to make sure the content is always readable
+      max-width: $large-screen-min-width;
+    }
   }
 }
 
-#content {
-  h2 {
-    margin-top: $big-spacer-height;
+@mixin paragraph {
+  max-width: $paragraph-width-large-screen;
+  margin: 0 auto;
+}
+
+h2 {
+  margin-top: $big-spacer-height;
+}
+
+.call-to-action {
+  text-align: center;
+  font-style: italic;
+
+  margin: $big-spacer-height 0;
+
+  font-size: $font-size-h4;
+
+  @include large-screen {
+    font-size: $font-size-h3;
   }
 
-  .call-to-action {
-    text-align: center;
-    font-style: italic;
-
-    margin: $big-spacer-height 0;
-
+  > a {
     font-size: $font-size-h4;
 
     @include large-screen {
       font-size: $font-size-h3;
-    }
-
-    > a {
-      font-size: $font-size-h4;
-
-      @include large-screen {
-        font-size: $font-size-h3;
-      }
     }
   }
 }

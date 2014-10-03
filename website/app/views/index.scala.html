@@ -17,8 +17,8 @@
     <h2>Some projects I have worked on</h2>
 
     <div>
-        <article id="appear-showroom">
-            <h3>Appear Showroom</h3>
+        <article id="appear-showroom-article" class="several-projects">
+            <h3>Appear Showroom website</h3>
 
             <a class="project-pic-anchor" href="/projects/appear-showroom">
                 <img src="/assets/images/appear-showroom/app-list.png" alt="Appear Showroom app list page"/>
@@ -31,28 +31,45 @@
             </div>
         </article><!--
 
-     --><article id="site-diary">
-            <h3>Site Diary</h3>
+     --><article id="site-diary-article" class="several-projects">
+            <h3>Site Diary tablet webapp</h3>
 
             <a class="project-pic-anchor" href="/projects/site-diary">
                 <img src="/assets/images/site-diary/event-detail.png" alt="Site Diary event detail view"/>
             </a>
 
             <p>A cross-platform single-page JavaScript webapp, using native device features such as the camera (via
-                Cordova)</p>
+                Cordova).</p>
 
             <div class="centered-contents">
                 <a href="/projects/site-diary" class="more-details">More details</a>
             </div>
         </article>
+
+        <article id="train-damage-article" class="lonely-project">
+            <h3>Train damage mobile webapp</h3>
+
+            <a class="project-pic-anchor centered-contents" href="/projects/train-damage">
+                <img src="/assets/images/train-damage/damage-type.png" alt="Train damage damage type view"/>
+            </a>
+
+            <p>A cross-platform single-page JavaScript webapp, using native device features such as the camera (via
+                Cordova).</p>
+
+            <div class="centered-contents">
+                <a href="/projects/train-damage" class="more-details">More details</a>
+            </div>
+        </article>
     </div>
 </section>
 
-<section id="references">
+<!--<section id="references">
     <h2>A few references from clients</h2>
-</section>
+</section>-->
 
-<p class="call-to-action">Get in touch! <a href="mailto:christophe@@panta-rhei.io">christophe@@panta-rhei.io</a></p>
+<p class="call-to-action">Get in touch!<br />
+    <a href="mailto:christophe@@panta-rhei.io">christophe@@panta-rhei.io</a>
+</p>
 
 <section id="technologies">
     <h2>I know these technologies</h2>
@@ -89,12 +106,5 @@
 <!--
     Javascript
 -->
-<script type="text/javascript">
-    document.addEventListener("DOMContentLoaded", function () {
-        new CBR.Controllers.Index({
-            el: "#content"
-        }).run();
-    });
-</script>
 
 }

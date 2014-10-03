@@ -41,15 +41,11 @@
 #content {
   width: 100%;
   margin: 0 auto;
-  max-width: 34.28571em;
   padding-left: 1em;
   padding-right: 1em;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box; }
-  @media screen and (min-width: 61.27143em) {
-    #content {
-      max-width: 68.57143em; } }
 
 .lt-ie9 #content {
   width: 900px;
@@ -68,132 +64,154 @@ body {
   color: #213047;
   font-size: 14px; }
 
-#content {
-  /* TODO h1,
-  h2,
-  h3,
-  h4,
-  p,
-  ul,
-  ol,
-  form {
-    margin-top: 0;
-  } */
-  /* TODO li {
-    margin-bottom: $line-height-computed / 2; // TODO: in em
-  } */ }
-  #content h1,
-  #content h2 {
-    text-rendering: optimizelegibility;
-    font-smoothing: antialiased;
-    font-family: "Merriweather", sans-serif;
-    font-weight: lighter; }
-  #content h1 {
-    font-size: 32px;
-    text-align: center; }
-    @media screen and (min-width: 61.27143em) {
-      #content h1 {
-        font-size: 42px; } }
-  #content h2 {
-    font-size: 23px;
-    text-align: center; }
-    @media screen and (min-width: 61.27143em) {
-      #content h2 {
-        font-size: 32px; } }
-  #content h3 {
-    font-size: 18px;
-    margin-bottom: 0.5em; }
-    @media screen and (min-width: 61.27143em) {
-      #content h3 {
-        font-size: 23px; } }
-  #content h4 {
-    font-size: 18px; }
-  #content p,
-  #content span,
-  #content li,
-  #content a,
-  #content label {
-    line-height: 1.75em; }
-    @media screen and (min-width: 61.27143em) {
-      #content p,
-      #content span,
-      #content li,
-      #content a,
-      #content label {
-        font-size: 16px; } }
-  #content p {
-    text-align: justify; }
-  #content ul {
-    padding-left: 1.5em; }
-  #content a,
-  #content a:visited {
-    color: #415F8D;
-    cursor: pointer; }
-  #content a:hover,
-  #content a:focus {
-    color: #415F8D;
-    text-decoration: none; }
-  #content a,
-  #content span {
-    display: inline-block; }
+h1,
+h2 {
+  text-rendering: optimizelegibility;
+  font-smoothing: antialiased;
+  font-family: "Merriweather", sans-serif;
+  font-weight: lighter; }
+
+h1 {
+  font-size: 32px;
+  text-align: center; }
+  @media screen and (min-width: 61.27143em) {
+    h1 {
+      font-size: 42px;
+      margin-top: 15%; } }
+
+h2 {
+  font-size: 20px; }
+  @media screen and (min-width: 61.27143em) {
+    h2 {
+      font-size: 32px; } }
+
+h3 {
+  font-size: 18px;
+  margin-bottom: 0.5em; }
+  @media screen and (min-width: 61.27143em) {
+    h3 {
+      font-size: 20px; } }
+
+h4 {
+  font-size: 18px; }
+
+p,
+span,
+li,
+a,
+label {
+  line-height: 1.75em; }
+  @media screen and (min-width: 61.27143em) {
+    p,
+    span,
+    li,
+    a,
+    label {
+      font-size: 16px; } }
+
+p {
+  text-align: justify; }
+
+ul {
+  padding-left: 1.5em; }
+
+a,
+a:visited {
+  color: #415F8D;
+  cursor: pointer; }
+
+a:hover,
+a:focus {
+  color: #415F8D;
+  text-decoration: none; }
+
+a,
+span {
+  display: inline-block; }
 
 .centered-contents {
   text-align: center; }
 
-#content h2 {
-  margin-top: 100px; }
-#content .call-to-action {
+h2 {
+  margin-top: 15%; }
+
+.call-to-action {
   text-align: center;
   font-style: italic;
-  margin: 100px 0;
+  margin: 15% 0;
   font-size: 18px; }
   @media screen and (min-width: 61.27143em) {
-    #content .call-to-action {
-      font-size: 23px; } }
-  #content .call-to-action > a {
+    .call-to-action {
+      font-size: 20px; } }
+  .call-to-action > a {
     font-size: 18px; }
     @media screen and (min-width: 61.27143em) {
-      #content .call-to-action > a {
-        font-size: 23px; } }
+      .call-to-action > a {
+        font-size: 20px; } }
 
-#index #content h1 {
-  margin: 1em auto 0 auto;
-  padding-bottom: 0;
-  max-width: 18.5em; }
-  @media screen and (min-width: 61.27143em) {
-    #index #content h1 {
-      margin-top: 100px; } }
-  #index #content h1 > p {
-    margin-top: 0;
+#index #content {
+  max-width: 34.28571em; }
+@media screen and (min-width: 61.27143em) {
+  #index #content {
+    max-width: 68.57143em; } }
+#index h1 {
+  max-width: 18.5em;
+  margin-left: auto;
+  margin-right: auto; }
+  #index h1 > p {
     font-size: inherit;
     text-align: center;
     line-height: 1.25em; }
+#index h2 {
+  text-align: center; }
+#index #i-can-list {
+  max-width: 47em;
+  margin: 0 auto; }
 @media screen and (min-width: 61.27143em) {
-  #index #content #i-can-list {
-    max-width: 47em;
-    margin: 0 auto; } }
+  #index #projects article {
+    max-width: 32.28571em; } }
+#index #projects h3 {
+  margin-top: 0;
+  text-align: center; }
 @media screen and (min-width: 61.27143em) {
-  #index #content #projects article {
-    max-width: 32.28571em;
-    display: inline-block;
-    vertical-align: top; } }
-@media screen and (min-width: 59.27143em) {
-  #index #content #projects article:nth-child(odd) {
-    padding-right: 2em; } }
-#index #content #projects h3 {
-  margin-top: 0; }
-@media screen and (min-width: 61.27143em) {
-  #index #content #projects img:hover {
+  #index #projects img:hover {
     opacity: 0.8; } }
-#index #content .project-pic-anchor {
+#index .project-pic-anchor {
   display: block; }
+#index .several-projects {
+  margin-bottom: 3em; }
+  @media screen and (min-width: 61.27143em) {
+    #index .several-projects {
+      display: inline-block;
+      vertical-align: top; } }
+#index .lonely-project {
+  display: block;
+  margin: 0 auto; }
+  #index .lonely-project img {
+    max-width: 36.72566%; }
 @media screen and (min-width: 61.27143em) {
-  #index #content #technologies > article {
-    max-width: 47em;
-    margin: 0 auto; } }
-#index #content #technologies h3 {
+  #index #appear-showroom-article {
+    padding-right: 2em; } }
+#index #technologies > article {
+  max-width: 47em;
+  margin: 0 auto; }
+#index #technologies h3 {
   margin-bottom: 0.2em; }
-#index #content #technologies p {
+#index #technologies p {
   margin-top: 0; }
+
+#appear-showroom #content {
+  max-width: 50em; }
+@media screen and (min-width: 61.27143em) {
+  #appear-showroom #content {
+    max-width: 68.57143em; } }
+@media screen and (min-width: 61.27143em) {
+  #appear-showroom #intro {
+    margin-top: 15%; } }
+#appear-showroom img {
+  display: block;
+  margin-bottom: 15%; }
+#appear-showroom .centered-contents {
+  margin: 15% 0; }
 
 /*# sourceMappingURL=main.css.map */

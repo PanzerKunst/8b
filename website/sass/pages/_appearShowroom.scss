@@ -1,0 +1,23 @@
+#appear-showroom {
+  #content {
+    // To have text centered on small screens.
+    max-width: 50em;
+  }
+
+  @include page-max-width;
+
+  #intro {
+    @include large-screen {
+      margin-top: $big-spacer-height;
+    }
+  }
+
+  img {
+    display: block;
+    margin-bottom: $big-spacer-height;
+  }
+
+  .centered-contents {
+    margin: $big-spacer-height 0;
+  }
+}

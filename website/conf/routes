@@ -7,5 +7,7 @@ GET     /assets/*file                           controllers.Assets.at(path="/pub
 
 # Pages
 GET     /                                       controllers.Application.index
+GET     /projects                               controllers.Application.projects
+GET     /projects/appear-showroom               controllers.Application.appearShowroom
 
 # API
