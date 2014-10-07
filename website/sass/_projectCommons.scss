@@ -1,18 +1,23 @@
-@mixin page-max-width {
-  #content {
-    @include large-screen {
-      // In some cases we don’t want the size to exceed a certain width on bigger screens to make sure the content is always readable
-      max-width: $large-screen-min-width;
-    }
+@mixin content($width: $large-screen-min-width) {
+  margin-left: auto;
+  margin-right: auto;
+
+  // When the page is full width we don't want the content to be crammed to the edges of the screen so lets add some spacing on the sides
+  padding-left: $page-side-padding;
+  padding-right: $page-side-padding;
+
+  // To have text centered on small screens.
+  max-width: $width;
+
+  @include large-screen {
+    // In some cases we don't want the size to exceed a certain width on bigger screens to make sure the content is always readable
+    max-width: $large-screen-min-width;
   }
 }
 
-@mixin paragraph {
-  max-width: $paragraph-width-large-screen;
-  margin: 0 auto;
-}
-
-h2 {
+.content-section {
+  background-color: white;
+  padding: $big-spacer-height / 2 0;
   margin-top: $big-spacer-height;
 }
 
@@ -20,13 +25,16 @@ h2 {
   text-align: center;
   font-style: italic;
 
-  margin: $big-spacer-height 0;
-
   font-size: $font-size-h4;
 
   @include large-screen {
     font-size: $font-size-h3;
   }
+
+  $call-to-action-padding: $page-side-padding * $font-size-base / $font-size-h4;
+  padding: 0 $call-to-action-padding;
+
+  margin: $big-spacer-height 0;
 
   > a {
     font-size: $font-size-h4;

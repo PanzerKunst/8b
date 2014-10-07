@@ -1,15 +1,11 @@
 #appear-showroom {
   #content {
-    // To have text centered on small screens.
-    max-width: 50em;
+    @include content;
   }
 
-  @include page-max-width;
-
-  #intro {
-    @include large-screen {
-      margin-top: $big-spacer-height;
-    }
+  #intro,
+  h2 {
+    margin-top: $big-spacer-height;
   }
 
   img {

@@ -38,22 +38,10 @@
   font-family: 'Merriweather';
   src: url("fonts/merriweather/Merriweather-Light.otf");
   font-weight: lighter; }
-#content {
-  width: 100%;
-  margin: 0 auto;
-  padding-left: 1em;
-  padding-right: 1em;
+* {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box; }
-
-.lt-ie9 #content {
-  width: 900px;
-  padding-left: 30px;
-  padding-right: 30px; }
-
-img {
-  max-width: 100%; }
 
 html {
   overflow-y: scroll; }
@@ -61,7 +49,7 @@ html {
 body {
   background: url("images/NSLinenBackgroundPattern.png") repeat #f9f9f9;
   font-family: "Merriweather-Sans", serif;
-  color: #213047;
+  color: #31476a;
   font-size: 14px; }
 
 h1,
@@ -77,10 +65,11 @@ h1 {
   @media screen and (min-width: 61.27143em) {
     h1 {
       font-size: 42px;
-      margin-top: 15%; } }
+      margin-top: 10%; } }
 
 h2 {
-  font-size: 20px; }
+  font-size: 20px;
+  margin-top: 0; }
   @media screen and (min-width: 61.27143em) {
     h2 {
       font-size: 32px; } }
@@ -132,14 +121,17 @@ span {
 .centered-contents {
   text-align: center; }
 
-h2 {
-  margin-top: 15%; }
+.content-section {
+  background-color: white;
+  padding: 5% 0;
+  margin-top: 10%; }
 
 .call-to-action {
   text-align: center;
   font-style: italic;
-  margin: 15% 0;
-  font-size: 18px; }
+  font-size: 18px;
+  padding: 0 0.77778em;
+  margin: 10% 0; }
   @media screen and (min-width: 61.27143em) {
     .call-to-action {
       font-size: 20px; } }
@@ -149,16 +141,16 @@ h2 {
       .call-to-action > a {
         font-size: 20px; } }
 
-#index #content {
-  max-width: 34.28571em; }
-@media screen and (min-width: 61.27143em) {
-  #index #content {
-    max-width: 68.57143em; } }
 #index #intro {
-  margin-top: 1em; }
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1em;
+  padding-right: 1em;
+  max-width: 34.28571em;
+  margin-top: 10%; }
   @media screen and (min-width: 61.27143em) {
     #index #intro {
-      margin-top: 15%; } }
+      max-width: 68.57143em; } }
   #index #intro:after {
     content: "";
     display: table;
@@ -185,19 +177,8 @@ h2 {
       -o-transform: rotate(-90deg);
       transform: rotate(-90deg); } }
 #index h1 {
-  max-width: 18em;
+  max-width: 18.5em;
   margin: 0 auto;
-    /* TODO background: url("images/face.png") no-repeat top center;
-    background-size: 95px 95px;
-
-    padding-top: 95px;
-
-    @include large-screen {
-      background-position: top left;
-
-      padding-top: 0;
-      padding-left: 95px;
-    } */
   background-color: white;
   border-radius: 0.3em;
   padding: 0.2em; }
@@ -210,9 +191,32 @@ h2 {
       margin-bottom: 1em; }
 #index h2 {
   text-align: center; }
-#index #i-can-list {
-  max-width: 47em;
-  margin: 0 auto; }
+#index #i-can > h2 {
+  margin-top: 10%; }
+#index #i-can > div {
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1em;
+  padding-right: 1em;
+  max-width: 34.28571em; }
+  @media screen and (min-width: 61.27143em) {
+    #index #i-can > div {
+      max-width: 68.57143em; } }
+  @media screen and (min-width: 61.27143em) {
+    #index #i-can > div {
+      max-width: 50em;
+      margin: 0 auto; } }
+#index #projects > h2 {
+  padding: 0 0.7em; }
+#index #projects > div {
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1em;
+  padding-right: 1em;
+  max-width: 34.28571em; }
+  @media screen and (min-width: 61.27143em) {
+    #index #projects > div {
+      max-width: 68.57143em; } }
 @media screen and (min-width: 61.27143em) {
   #index #projects article {
     max-width: 32.28571em; } }
@@ -220,16 +224,16 @@ h2 {
   margin-top: 0;
   text-align: center; }
 #index #projects img {
-  -webkit-transition: opacity 600ms ease 0s;
-  -moz-transition: opacity 600ms ease 0s;
-  transition: opacity 600ms ease 0s; }
+  /* Commented because of visual glitch
+  @include transition(opacity 600ms ease 0s); */
+  width: 100%; }
   @media screen and (min-width: 61.27143em) {
     #index #projects img:hover {
-      opacity: 0.7; } }
+      opacity: 0.8; } }
 #index .project-pic-anchor {
   display: block; }
 #index .several-projects {
-  margin-bottom: 3em; }
+  margin-bottom: 5%; }
   @media screen and (min-width: 61.27143em) {
     #index .several-projects {
       display: inline-block;
@@ -241,30 +245,46 @@ h2 {
     max-width: 36.72566%; }
 @media screen and (min-width: 61.27143em) {
   #index #appear-showroom-article {
-    padding-right: 2em; } }
+    margin-right: 2em; } }
 #index #experience > article,
 #index #experience > div {
-  max-width: 47em;
-  margin: 0 auto; }
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1em;
+  padding-right: 1em;
+  max-width: 34.28571em; }
+  @media screen and (min-width: 61.27143em) {
+    #index #experience > article,
+    #index #experience > div {
+      max-width: 68.57143em; } }
+  @media screen and (min-width: 61.27143em) {
+    #index #experience > article,
+    #index #experience > div {
+      max-width: 50em;
+      margin: 0 auto; } }
 #index #experience h3 {
   margin-bottom: 0.2em; }
 #index #experience p {
   margin-top: 0; }
-#index #experience > div {
+#index #experience > p {
   margin-top: 2em; }
 
 #appear-showroom #content {
-  max-width: 50em; }
-@media screen and (min-width: 61.27143em) {
-  #appear-showroom #content {
-    max-width: 68.57143em; } }
-@media screen and (min-width: 61.27143em) {
-  #appear-showroom #intro {
-    margin-top: 15%; } }
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1em;
+  padding-right: 1em;
+  max-width: 68.57143em; }
+  @media screen and (min-width: 61.27143em) {
+    #appear-showroom #content {
+      max-width: 68.57143em; } }
+#appear-showroom #intro,
+#appear-showroom h2 {
+  margin-top: 10%; }
 #appear-showroom img {
   display: block;
-  margin-bottom: 15%; }
+  margin-bottom: 10%; }
 #appear-showroom .centered-contents {
-  margin: 15% 0; }
+  margin: 10% 0; }
 
 /*# sourceMappingURL=main.css.map */

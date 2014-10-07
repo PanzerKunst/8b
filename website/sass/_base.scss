@@ -1,3 +1,7 @@
+* {
+  @include box-sizing(border-box);
+}
+
 html {
   // Always display the vertical scrollbar
   overflow-y: scroll;
@@ -7,7 +11,7 @@ body {
   background: url("images/NSLinenBackgroundPattern.png") repeat #f9f9f9;
 
   font-family: "Merriweather-Sans", serif;
-  color: darken(#415F8D, 20%);
+  color: darken(#415F8D, 10%);
   font-size: $font-size-base;
 }
 
@@ -37,6 +41,8 @@ h2 {
   @include large-screen {
     font-size: $font-size-h2;
   }
+
+  margin-top: 0;
 }
 
 h3 {

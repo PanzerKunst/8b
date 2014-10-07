@@ -1,17 +1,19 @@
-#index {
-  #content {
-    // To have text centered on small screens.
-    max-width: $project-article-width + 2 * $page-side-padding;
+@mixin index-content {
+  @include content($project-article-width + 2 * $page-side-padding);
+}
+
+@mixin index-paragraph {
+  @include large-screen {
+    max-width: $paragraph-width-large-screen;
+    margin: 0 auto;
   }
+}
 
-  @include page-max-width;
-
+#index {
   #intro {
-    margin-top: 1em;
+    @include index-content;
 
-    @include large-screen {
-      margin-top: $big-spacer-height;
-    }
+    margin-top: $big-spacer-height;
 
     @include clearfix;
 
@@ -25,7 +27,6 @@
 
     > img {
       width: 90px;
-
       margin-top: 1em;
     }
   }
@@ -47,20 +48,8 @@
 
   h1 {
     // For nicer text layout
-    max-width: 18em;
+    max-width: 18.5em;
     margin: 0 auto;
-
-    /* TODO background: url("images/face.png") no-repeat top center;
-    background-size: 95px 95px;
-
-    padding-top: 95px;
-
-    @include large-screen {
-      background-position: top left;
-
-      padding-top: 0;
-      padding-left: 95px;
-    } */
 
     background-color: white;
     border-radius: 0.3em;
@@ -84,11 +73,28 @@
     text-align: center;
   }
 
-  #i-can-list {
-    @include paragraph;
+  #i-can {
+    > h2 {
+      margin-top: $big-spacer-height;
+    }
+
+    > div {
+      @include index-content;
+      @include index-paragraph;
+    }
   }
 
   #projects {
+    // To keep a bit of space on each side on small screens
+    > h2 {
+      $h2-padding: $page-side-padding * $font-size-base / $font-size-h3;
+      padding: 0 $h2-padding;
+    }
+
+    > div {
+      @include index-content;
+    }
+
     article {
       @include large-screen {
         max-width: $project-article-width;
@@ -101,11 +107,14 @@
     }
 
     img {
-      @include transition(opacity 600ms ease 0s);
+      /* TODO Commented because of visual glitch
+      @include transition(opacity 600ms ease 0s); */
+
+      width: 100%;
 
       &:hover {
         @include large-screen {
-          opacity: 0.7;
+          opacity: 0.8;
         }
       }
     }
@@ -124,7 +133,7 @@
       vertical-align: top;
     }
 
-    margin-bottom: 3em;
+    margin-bottom: $big-spacer-height / 2;
   }
 
   .lonely-project {
@@ -141,14 +150,15 @@
 
   #appear-showroom-article {
     @media screen and (min-width: $large-screen-mq-breakpoint) {
-      padding-right: $project-article-separator-width;
+      margin-right: $project-article-separator-width;
     }
   }
 
   #experience {
     > article,
     > div {
-      @include paragraph;
+      @include index-content;
+      @include index-paragraph;
     }
 
     h3 {
@@ -159,7 +169,7 @@
       margin-top: 0;
     }
 
-    > div {
+    > p {
       margin-top: 2em;
     }
   }
