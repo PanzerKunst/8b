@@ -1,0 +1,23 @@
+#site-diary {
+  #content {
+    @include content;
+  }
+
+  #intro,
+  h2 {
+    margin-top: $big-spacer-height;
+  }
+
+  article > p {
+    text-align: center;
+  }
+
+  img {
+    display: block;
+    margin-bottom: $big-spacer-height;
+  }
+
+  .centered-contents {
+    margin: $big-spacer-height 0;
+  }
+}

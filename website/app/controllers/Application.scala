@@ -18,6 +18,10 @@ object Application extends Controller {
     Ok(views.html.appearShowroom())
   }
 
+  def siteDiary = Action { request =>
+    Ok(views.html.siteDiary())
+  }
+
   def trainDamage = Action { request =>
     Ok(views.html.trainDamage())
   }

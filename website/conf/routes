@@ -10,5 +10,6 @@ GET     /                                       controllers.Application.index
 GET     /projects                               controllers.Application.projects
 GET     /projects/appear-showroom               controllers.Application.appearShowroom
 GET     /projects/train-damage                  controllers.Application.trainDamage
+GET     /projects/site-diary                    controllers.Application.siteDiary
 
 # API

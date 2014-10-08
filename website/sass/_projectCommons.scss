@@ -15,6 +15,12 @@
   }
 }
 
+header,
+footer {
+  height: 14px;
+  background: url("/assets/images/header-footer-bg.png") repeat-x;
+}
+
 .content-section {
   background-color: white;
   padding: $big-spacer-height / 2 0;
@@ -43,4 +49,9 @@
       font-size: $font-size-h3;
     }
   }
+}
+
+.glyphicon-home {
+  text-decoration: none;
+  font-size: 30px;
 }
