@@ -1,0 +1,45 @@
+#train-damage {
+  #content {
+    @include content;
+
+    > div {
+      text-align: center;
+    }
+  }
+
+  #intro,
+  h2 {
+    margin-top: $big-spacer-height;
+  }
+
+  ul {
+    display: inline;
+
+    list-style-type: none;
+    padding: 0;
+
+    p {
+      text-align: center;
+    }
+  }
+
+  li {
+    display: inline-block;
+
+    margin: 0 1em 1em 1em;
+
+    width: 18.7em;
+
+    @include large-screen {
+      width: 17.3em;
+    }
+  }
+
+  img {
+    width: 100%;  // TODO
+  }
+
+  .centered-contents {
+    margin: $big-spacer-height 0;
+  }
+}

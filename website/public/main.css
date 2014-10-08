@@ -224,7 +224,7 @@ span {
   margin-top: 0;
   text-align: center; }
 #index #projects img {
-  /* Commented because of visual glitch
+  /* TODO Commented because of visual glitch
   @include transition(opacity 600ms ease 0s); */
   width: 100%; }
   @media screen and (min-width: 61.27143em) {
@@ -285,6 +285,38 @@ span {
   display: block;
   margin-bottom: 10%; }
 #appear-showroom .centered-contents {
+  margin: 10% 0; }
+
+#train-damage #content {
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1em;
+  padding-right: 1em;
+  max-width: 68.57143em; }
+  @media screen and (min-width: 61.27143em) {
+    #train-damage #content {
+      max-width: 68.57143em; } }
+  #train-damage #content > div {
+    text-align: center; }
+#train-damage #intro,
+#train-damage h2 {
+  margin-top: 10%; }
+#train-damage ul {
+  display: inline;
+  list-style-type: none;
+  padding: 0; }
+  #train-damage ul p {
+    text-align: center; }
+#train-damage li {
+  display: inline-block;
+  margin: 0 1em 1em 1em;
+  width: 18.7em; }
+  @media screen and (min-width: 61.27143em) {
+    #train-damage li {
+      width: 17.3em; } }
+#train-damage img {
+  width: 100%; }
+#train-damage .centered-contents {
   margin: 10% 0; }
 
 /*# sourceMappingURL=main.css.map */

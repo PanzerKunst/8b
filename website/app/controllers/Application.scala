@@ -17,4 +17,8 @@ object Application extends Controller {
   def appearShowroom = Action { request =>
     Ok(views.html.appearShowroom())
   }
+
+  def trainDamage = Action { request =>
+    Ok(views.html.trainDamage())
+  }
 }

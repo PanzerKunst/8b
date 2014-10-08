@@ -9,5 +9,6 @@ GET     /assets/*file                           controllers.Assets.at(path="/pub
 GET     /                                       controllers.Application.index
 GET     /projects                               controllers.Application.projects
 GET     /projects/appear-showroom               controllers.Application.appearShowroom
+GET     /projects/train-damage                  controllers.Application.trainDamage
 
 # API
