@@ -38,13 +38,24 @@
   font-family: 'Merriweather';
   src: url("fonts/merriweather/Merriweather-Light.otf");
   font-weight: lighter; }
-* {
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box; }
+/* apply a natural box layout model to all elements, but allowing components to change */
+*,
+*:before,
+*:after {
+  box-sizing: inherit; }
+
+img,
+iframe,
+embed {
+  max-width: 100%; }
+
+a,
+span {
+  display: inline-block; }
 
 html {
-  overflow-y: scroll; }
+  overflow-y: scroll;
+  box-sizing: border-box; }
 
 body {
   background: url("images/NSLinenBackgroundPattern.png") repeat #f9f9f9;
@@ -113,10 +124,6 @@ a:hover,
 a:focus {
   color: #c40064;
   text-decoration: none; }
-
-a,
-span {
-  display: inline-block; }
 
 .centered-contents {
   text-align: center; }
@@ -209,43 +216,39 @@ span {
 #index #projects > h2 {
   padding: 0 0.7em; }
 #index #projects > div {
-  margin-left: auto;
-  margin-right: auto;
-  padding-left: 1em;
-  padding-right: 1em;
+  margin: 0 auto;
+  text-align: center;
   max-width: 34.28571em; }
   @media screen and (min-width: 61.27143em) {
     #index #projects > div {
       max-width: 68.57143em; } }
-@media screen and (min-width: 61.27143em) {
-  #index #projects article {
-    max-width: 32.28571em; } }
+#index #projects ul {
+  display: inline;
+  list-style-type: none;
+  padding: 0;
+  margin: 0; }
+#index #projects li {
+  margin: 0 1em 5% 1em;
+  max-width: 452px; }
+  @media screen and (min-width: 61.27143em) {
+    #index #projects li {
+      font-size: 14px;
+      display: inline-block; } }
+  #index #projects li:last-child {
+    margin-bottom: 0; }
+  #index #projects li > a {
+    display: block; }
 #index #projects h3 {
   margin-top: 0;
   text-align: center; }
 #index #projects img {
   /* TODO Commented because of visual glitch
-  @include transition(opacity 600ms ease 0s); */
-  width: 100%; }
+  @include transition(opacity 600ms ease 0s); */ }
   @media screen and (min-width: 61.27143em) {
     #index #projects img:hover {
       opacity: 0.8; } }
-#index .project-pic-anchor {
-  display: block; }
-#index .several-projects {
-  margin-bottom: 5%; }
-  @media screen and (min-width: 61.27143em) {
-    #index .several-projects {
-      display: inline-block;
-      vertical-align: top; } }
-#index .lonely-project {
-  display: block;
-  margin: 0 auto; }
-  #index .lonely-project img {
-    max-width: 36.72566%; }
-@media screen and (min-width: 61.27143em) {
-  #index #appear-showroom-article {
-    margin-right: 2em; } }
+#index #projects #train-damage-item img {
+  max-width: 36.72566%; }
 #index #experience > article,
 #index #experience > div {
   margin-left: auto;

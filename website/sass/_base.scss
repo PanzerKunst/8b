@@ -1,10 +1,27 @@
-* {
-  @include box-sizing(border-box);
+/* apply a natural box layout model to all elements, but allowing components to change */
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+// To avoid these elements to bleed through the parent
+img,
+iframe,
+embed {
+  max-width: 100%;
+}
+
+a,
+span {
+  display: inline-block; // For "width" declaration to work
 }
 
 html {
   // Always display the vertical scrollbar
   overflow-y: scroll;
+
+  box-sizing: border-box;
 }
 
 body {
@@ -89,11 +106,6 @@ a:hover,
 a:focus {
   color: $action-color;
   text-decoration: none;
-}
-
-a,
-span {
-  display: inline-block; // For "width" declaration to work
 }
 
 .centered-contents {

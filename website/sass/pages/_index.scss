@@ -26,7 +26,7 @@
     }
 
     > img {
-      width: 90px;
+      width: 90px;  // TODO: remove once image is correct size
       margin-top: 1em;
     }
   }
@@ -92,12 +92,46 @@
     }
 
     > div {
-      @include index-content;
+      margin: 0 auto;
+
+      text-align: center;
+
+      // To have text centered on small screens.
+      max-width: $project-article-width + 2 * $page-side-padding;
+
+      @include large-screen {
+        // In some cases we don't want the size to exceed a certain width on bigger screens to make sure the content is always readable
+        max-width: $large-screen-min-width;
+      }
     }
 
-    article {
+    ul {
+      display: inline;
+
+      list-style-type: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    li {
       @include large-screen {
-        max-width: $project-article-width;
+        // Overriding $font-size-body-large-screen
+        font-size: $font-size-base;
+        display: inline-block;
+      }
+
+      margin: 0 $page-side-padding $big-spacer-height/2 $page-side-padding;
+
+      // TODO: remove once images are correct size
+      max-width: 452px;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+
+      > a {
+        // Otherwise the anchor expands beyond $large-screen-min-width
+        display: block;
       }
     }
 
@@ -110,47 +144,21 @@
       /* TODO Commented because of visual glitch
       @include transition(opacity 600ms ease 0s); */
 
-      width: 100%;
-
       &:hover {
         @include large-screen {
           opacity: 0.8;
         }
       }
     }
-  }
 
-  // Otherwise the anchor expands beyond $large-screen-min-width
-  .project-pic-anchor {
-    display: block;
-  }
+    // TODO: remove once images are correct size
+    #train-damage-item {
+      img {
+        $article-width: 452;
+        $image-width-hdpi: 332;
 
-  .several-projects {
-    @include large-screen {
-      display: inline-block;
-
-      // Otherwise the element is aligned to the bottom because of display inline-block
-      vertical-align: top;
-    }
-
-    margin-bottom: $big-spacer-height / 2;
-  }
-
-  .lonely-project {
-    display: block;
-    margin: 0 auto;
-
-    img {
-      $article-width: 452;
-      $image-width-hdpi: 332;
-
-      max-width: percentage($image-width-hdpi / 2 / $article-width);
-    }
-  }
-
-  #appear-showroom-article {
-    @media screen and (min-width: $large-screen-mq-breakpoint) {
-      margin-right: $project-article-separator-width;
+        max-width: percentage($image-width-hdpi / 2 / $article-width);
+      }
     }
   }
 
