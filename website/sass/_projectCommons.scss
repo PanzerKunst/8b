@@ -23,8 +23,14 @@ footer {
 
 .content-section {
   background-color: white;
-  padding: $big-spacer-height / 2 0;
   margin-top: $big-spacer-height;
+
+  padding: $big-spacer-height 0;
+
+  @include large-screen {
+    padding-top: $big-spacer-height / 2;
+    padding-bottom: $big-spacer-height / 2;
+  }
 }
 
 .call-to-action {

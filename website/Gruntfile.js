@@ -40,13 +40,9 @@ module.exports = function (grunt) {
             dist: {
                 src: [
                     // Libs
-                    "libs/p.js",
-                    "libs/jquery-2.1.1.min.js",
                     "libs/fastclick.js",
-                    "libs/lodash.min.js",
 
                     // Global
-                    "javascripts/global.js",
 
                     // Common
 
@@ -55,9 +51,6 @@ module.exports = function (grunt) {
                     // Models
 
                     // Controllers
-                    "javascripts/controllers/base.js",
-                    "javascripts/controllers/citizenHiveOpenProjectsBase.js",
-                    "javascripts/controllers/index.js"
 
                     // Templates
                 ],

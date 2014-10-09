@@ -13,7 +13,11 @@
   #intro {
     @include index-content;
 
-    margin-top: $big-spacer-height;
+    margin-top: $big-spacer-height / 2;
+
+    @include large-screen {
+      margin-top: $big-spacer-height;
+    }
 
     @include clearfix;
 
@@ -114,13 +118,15 @@
     }
 
     li {
+      margin: 0 $page-side-padding $big-spacer-height $page-side-padding;
+
       @include large-screen {
         // Overriding $font-size-body-large-screen
         font-size: $font-size-base;
         display: inline-block;
-      }
 
-      margin: 0 $page-side-padding $big-spacer-height/2 $page-side-padding;
+        margin-bottom: $big-spacer-height / 2;
+      }
 
       // TODO: remove once images are correct size
       max-width: 452px;
@@ -177,8 +183,8 @@
       margin-top: 0;
     }
 
-    > p {
-      margin-top: 2em;
+    > div > p {
+      margin: 2em 0 0 0;
     }
   }
 }

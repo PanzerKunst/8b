@@ -9,12 +9,13 @@ $ sudo apt-get install nginx
 # Web server
 ############
 
-$ sudo cp /etc/nginx/sites-available/openprojects /etc/nginx/sites-available/pantarhei
+$ sudo cp /etc/nginx/sites-available/openprojects /etc/nginx/sites-available/8b
 
-$ sudo vi /etc/nginx/sites-available/pantarhei
+$ sudo vi /etc/nginx/sites-available/8b
+# 8b
 server {
         listen 80;
-        server_name panta-rhei.reportingfromtheborderland.net;
+        server_name 8b.nu;
 
         location / {
                 proxy_pass http://localhost:9003;
@@ -27,11 +28,11 @@ server {
         }
 }
 
-$ sudo ln -s /etc/nginx/sites-available/pantarhei /etc/nginx/sites-enabled/pantarhei
+$ sudo ln -s /etc/nginx/sites-available/8b /etc/nginx/sites-enabled/8b
 
 $ sudo service nginx restart
 
-$ cd ~/panta-rhei/website
+$ cd ~/8b/website
 $ dos2unix activator
 $ chmod u+x activator
 
