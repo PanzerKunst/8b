@@ -686,7 +686,7 @@ h2 {
   font-weight: lighter; }
 
 h1 {
-  font-size: 32px;
+  font-size: 30px;
   text-align: center; }
   @media screen and (min-width: 61.27143em) {
     h1 {
@@ -698,7 +698,7 @@ h2 {
   margin-top: 0; }
   @media screen and (min-width: 61.27143em) {
     h2 {
-      font-size: 32px; } }
+      font-size: 30px; } }
 
 h3 {
   font-size: 18px;
