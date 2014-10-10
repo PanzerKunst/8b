@@ -745,8 +745,18 @@ a:focus {
 
 header,
 footer {
-  height: 14px;
-  background: url("/assets/images/header-footer-bg.png") repeat-x; }
+  background: transparent url("images/sprite") no-repeat scroll 0 -300px;
+  background-image: url("images/sprite.png");
+  height: 14px; }
+  @media only screen and (-webkit-min-device-pixel-ratio: 1.3), only screen and (min--moz-device-pixel-ratio: 1.3), only screen and (-o-min-device-pixel-ratio: 1.3 / 1), only screen and (min-resolution: 125dpi), only screen and (min-resolution: 1.3dppx) {
+    header,
+    footer {
+      background-image: url("images/sprite_2x.png");
+      background-size: 1000px 1000px; } }
+  @media only screen and (-webkit-min-device-pixel-ratio: 1.3), only screen and (min--moz-device-pixel-ratio: 1.3), only screen and (-o-min-device-pixel-ratio: 1.3 / 1), only screen and (min-resolution: 125dpi), only screen and (min-resolution: 1.3dppx) {
+    header,
+    footer {
+      background-position: 0 -150px; } }
 
 .content-section {
   background-color: white;
@@ -794,18 +804,30 @@ footer {
     display: table;
     clear: both; }
   @media screen and (min-width: 61.27143em) {
-    #index #intro > img,
     #index #intro > div,
     #index #intro > h1 {
       float: left; } }
-  #index #intro > img {
-    width: 100px;
-    margin-top: 14px; }
+#index .me,
 #index .text-bubble-origin {
-  background: url("images/text-bubble-origin.png");
-  width: 16px;
-  height: 16px;
+  background: transparent url("images/sprite") no-repeat scroll 0 0;
+  background-image: url("images/sprite.png");
   margin: 0 auto; }
+  @media only screen and (-webkit-min-device-pixel-ratio: 1.3), only screen and (min--moz-device-pixel-ratio: 1.3), only screen and (-o-min-device-pixel-ratio: 1.3 / 1), only screen and (min-resolution: 125dpi), only screen and (min-resolution: 1.3dppx) {
+    #index .me,
+    #index .text-bubble-origin {
+      background-image: url("images/sprite_2x.png");
+      background-size: 1000px 1000px; } }
+#index .me {
+  width: 100px;
+  height: 100px;
+  margin-top: 14px; }
+#index .text-bubble-origin {
+  background-position: -300px 0;
+  width: 16px;
+  height: 16px; }
+  @media only screen and (-webkit-min-device-pixel-ratio: 1.3), only screen and (min--moz-device-pixel-ratio: 1.3), only screen and (-o-min-device-pixel-ratio: 1.3 / 1), only screen and (min-resolution: 125dpi), only screen and (min-resolution: 1.3dppx) {
+    #index .text-bubble-origin {
+      background-position: -150px 0; } }
   @media screen and (min-width: 61.27143em) {
     #index .text-bubble-origin {
       margin: 56px 0 0 5px;
@@ -903,6 +925,12 @@ footer {
   margin-top: 0; }
 #index #experience > div > p {
   margin: 2em 0 0 0; }
+#index .glyphicon-envelope {
+  margin-right: 0.5em;
+  font-size: 14px; }
+  @media screen and (min-width: 61.27143em) {
+    #index .glyphicon-envelope {
+      font-size: 16px; } }
 
 #appear-showroom #content {
   margin-left: auto;

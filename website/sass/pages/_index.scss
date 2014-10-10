@@ -21,27 +21,39 @@
 
     @include clearfix;
 
-    > img,
     > div,
     > h1 {
       @include large-screen {
         float: left;
       }
     }
+  }
 
-    > img {
-      width: 100px;  // TODO: remove once image is correct size
-      margin-top: 14px;
-    }
+  .me,
+  .text-bubble-origin {
+    background: transparent url($sprite-url) no-repeat scroll 0 0;
+
+    @include hdpi-sprite;
+
+    margin: 0 auto;
+  }
+
+  .me {
+    width: 100px;
+    height: 100px;
+
+    margin-top: 14px;
   }
 
   .text-bubble-origin {
-    background: url("images/text-bubble-origin.png");
+    background-position: -300px 0;
+
+    @include hidpi {
+      background-position: half-pos(-300px, 0);
+    }
 
     width: 16px;
     height: 16px;
-
-    margin: 0 auto;
 
     @include large-screen {
       margin: 56px 0 0 5px;
@@ -185,6 +197,16 @@
 
     > div > p {
       margin: 2em 0 0 0;
+    }
+  }
+
+  .glyphicon-envelope {
+    margin-right: 0.5em;
+
+    font-size: $font-size-base;
+
+    @include large-screen {
+      font-size: $font-size-body-large-screen;
     }
   }
 }
