@@ -31,7 +31,7 @@
 
   .me,
   .text-bubble-origin {
-    background: transparent url($sprite-url) no-repeat scroll 0 0;
+    background: transparent url($sprite-url) no-repeat scroll;
 
     @include hdpi-sprite;
 
@@ -46,10 +46,13 @@
   }
 
   .text-bubble-origin {
-    background-position: -300px 0;
+    $text-bubble-image-location-x: -300px;
+    $text-bubble-image-location-y: 0;
+
+    background-position: $text-bubble-image-location-x $text-bubble-image-location-y;
 
     @include hidpi {
-      background-position: half-pos(-300px, 0);
+      background-position: half-pos($text-bubble-image-location-x, $text-bubble-image-location-y);
     }
 
     width: 16px;
@@ -100,6 +103,8 @@
     }
   }
 
+  $portfolio-item-width-px: 452px;
+
   #projects {
     // To keep a bit of space on each side on small screens
     > h2 {
@@ -140,16 +145,19 @@
         margin-bottom: $big-spacer-height / 2;
       }
 
-      // TODO: remove once images are correct size
-      max-width: 452px;
+      max-width: $portfolio-item-width-px;
 
       &:last-child {
         margin-bottom: 0;
       }
 
       > a {
-        // Otherwise the anchor expands beyond $large-screen-min-width
+        // To avoid the anchor getting wider than the container
         display: block;
+      }
+
+      > p {
+        margin-top: 0.5em;
       }
     }
 
@@ -160,7 +168,7 @@
 
     img {
       /* TODO Commented because of visual glitch
-      @include transition(opacity 600ms ease 0s); */
+      @include transition(opacity 300ms ease 0s); */
 
       &:hover {
         @include large-screen {
@@ -168,16 +176,11 @@
         }
       }
     }
+  }
 
-    // TODO: remove once images are correct size
-    #train-damage-item {
-      img {
-        $article-width: 452;
-        $image-width-hdpi: 332;
-
-        max-width: percentage($image-width-hdpi / 2 / $article-width);
-      }
-    }
+  #train-damage-portfolio-preview-img {
+    $train-damage-image-width-2x: 358px;
+    max-width: percentage($train-damage-image-width-2x / 2 / $portfolio-item-width-px);
   }
 
   #experience {

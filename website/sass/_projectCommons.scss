@@ -17,14 +17,15 @@
 
 header,
 footer {
+  $header-footer-image-location-x: 0;
   $header-footer-image-location-y: -300px;
 
-  background: transparent url($sprite-url) no-repeat scroll 0 $header-footer-image-location-y;
+  background: transparent url($sprite-url) repeat-x scroll $header-footer-image-location-x $header-footer-image-location-y;
 
   @include hdpi-sprite;
 
   @include hidpi {
-    background-position: half-pos(0, $header-footer-image-location-y);
+    background-position: half-pos($header-footer-image-location-x, $header-footer-image-location-y);
   }
 
   height: 14px;
