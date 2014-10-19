@@ -21,71 +21,52 @@
 
     @include clearfix;
 
-    > div,
-    > h1 {
-      @include large-screen {
+    @include large-screen {
+      > div,
+      .text-bubble {
         float: left;
+      }
+    }
+
+    .text-bubble-origin {
+      margin: 0 auto;
+
+      @include large-screen {
+        margin: 56px 0 0 5px;
+
+        @include transform(rotate(-90deg));
+      }
+    }
+
+    .text-bubble {
+      // For nicer text layout
+      max-width: 18.5em;
+
+      padding: 0.2em;
+
+      > p {
+        font-size: inherit;
+        text-align: center;
+        line-height: 1.25em;
+
+        margin: 0;
+
+        &:first-child {
+          margin-bottom: $paragraph-default-margin;
+        }
       }
     }
   }
 
-  .me,
-  .text-bubble-origin {
+  .me {
     background: transparent url($sprite-url) no-repeat scroll;
 
     @include hdpi-sprite;
 
-    margin: 0 auto;
-  }
-
-  .me {
     width: 100px;
     height: 100px;
 
-    margin-top: 14px;
-  }
-
-  .text-bubble-origin {
-    $text-bubble-image-location-x: -300px;
-    $text-bubble-image-location-y: 0;
-
-    background-position: $text-bubble-image-location-x $text-bubble-image-location-y;
-
-    @include hidpi {
-      background-position: half-pos($text-bubble-image-location-x, $text-bubble-image-location-y);
-    }
-
-    width: 16px;
-    height: 16px;
-
-    @include large-screen {
-      margin: 56px 0 0 5px;
-
-      @include transform(rotate(-90deg));
-    }
-  }
-
-  h1 {
-    // For nicer text layout
-    max-width: 18.5em;
-    margin: 0 auto;
-
-    background-color: white;
-    border-radius: 0.3em;
-
-    padding: 0.2em;
-
-    > p {
-      font-size: inherit;
-      text-align: center;
-      line-height: 1.25em;
-
-      margin: 0;
-
-      &:first-child {
-        margin-bottom: $paragraph-default-margin;
-      }
-    }
+    margin: 14px auto 0 auto;
   }
 
   h2 {
@@ -93,9 +74,7 @@
   }
 
   #i-can {
-    > h2 {
-      margin-top: $big-spacer-height;
-    }
+    margin: $big-spacer-height 0 $big-spacer-height/2 0;
 
     > div {
       @include index-content;
@@ -155,10 +134,6 @@
         // To avoid the anchor getting wider than the container
         display: block;
       }
-
-      > p {
-        margin-top: 0.5em;
-      }
     }
 
     h3 {
@@ -170,17 +145,88 @@
       /* TODO Commented because of visual glitch
       @include transition(opacity 300ms ease 0s); */
 
-      &:hover {
-        @include large-screen {
+      @include large-screen {
+        &:hover {
           opacity: 0.8;
         }
       }
+    }
+
+    p {
+      margin-top: 0.5em;
+      text-align: left;
     }
   }
 
   #train-damage-portfolio-preview-img {
     $train-damage-image-width-2x: 358px;
     max-width: percentage($train-damage-image-width-2x / 2 / $portfolio-item-width-px);
+  }
+
+  #references {
+    padding-top: $big-spacer-height / 2;
+
+    > div {
+      margin: 0 auto;
+
+      text-align: center;
+
+      // To have text centered on small screens.
+      max-width: $project-article-width + 2 * $page-side-padding;
+
+      @include large-screen {
+        // In some cases we don't want the size to exceed a certain width on bigger screens to make sure the content is always readable
+        max-width: $large-screen-min-width;
+      }
+    }
+
+    ul {
+      display: inline;
+
+      list-style-type: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    li {
+      margin: 0 $page-side-padding $big-spacer-height $page-side-padding;
+
+      @include large-screen {
+        // Overriding $font-size-body-large-screen
+        font-size: $font-size-base;
+        display: inline-block;
+
+        margin-bottom: $big-spacer-height / 2;
+      }
+
+      max-width: $portfolio-item-width-px;
+
+      vertical-align: top;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+
+    blockquote {
+      text-align: left;
+    }
+
+    .text-bubble-origin {
+      @include transform(rotate(180deg));
+
+      margin-left: 2em;
+    }
+
+    .text-bubble {
+      padding: 0.3em 0.7em;
+    }
+
+    @include large-screen {
+      footer {
+        font-size: $font-size-body-large-screen;
+      }
+    }
   }
 
   #experience {
