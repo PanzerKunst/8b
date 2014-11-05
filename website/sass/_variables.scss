@@ -5,10 +5,7 @@ $page-side-padding: 1em;
 $line-height-project: 1.75em;
 
 $large-screen-min-width: 68.57142857142857em; // @ 14px = 960px
-
-$strange-em-difference-for-large-screen-mq-breakpoint: 7.3em;
-
-$large-screen-mq-breakpoint: $large-screen-min-width - $strange-em-difference-for-large-screen-mq-breakpoint;
+$large-screen-mq-breakpoint: 960px; // Can't use ems because inside @media font size is always the default browser font size
 
 $sprite-url: 'images/sprite';
 

@@ -688,7 +688,7 @@ h2 {
 h1 {
   font-size: 30px;
   text-align: center; }
-  @media screen and (min-width: 61.27143em) {
+  @media screen and (min-width: 960px) {
     h1 {
       font-size: 42px;
       margin-top: 10%; } }
@@ -696,14 +696,14 @@ h1 {
 h2 {
   font-size: 20px;
   margin-top: 0; }
-  @media screen and (min-width: 61.27143em) {
+  @media screen and (min-width: 960px) {
     h2 {
       font-size: 30px; } }
 
 h3 {
   font-size: 18px;
   margin-bottom: 0.5em; }
-  @media screen and (min-width: 61.27143em) {
+  @media screen and (min-width: 960px) {
     h3 {
       font-size: 20px; } }
 
@@ -716,7 +716,7 @@ li,
 a,
 label {
   line-height: 1.75em; }
-  @media screen and (min-width: 61.27143em) {
+  @media screen and (min-width: 960px) {
     p,
     span,
     li,
@@ -768,12 +768,12 @@ blockquote {
   font-size: 18px;
   padding: 0 0.77778em;
   margin: 10% 0; }
-  @media screen and (min-width: 61.27143em) {
+  @media screen and (min-width: 960px) {
     .call-to-action {
       font-size: 20px; } }
   .call-to-action > a {
     font-size: 18px; }
-    @media screen and (min-width: 61.27143em) {
+    @media screen and (min-width: 960px) {
       .call-to-action > a {
         font-size: 20px; } }
 
@@ -806,23 +806,23 @@ blockquote {
   padding-right: 1em;
   max-width: 34.28571em;
   margin-top: 5%; }
-  @media screen and (min-width: 61.27143em) {
+  @media screen and (min-width: 960px) {
     #index #intro {
       max-width: 68.57143em; } }
-  @media screen and (min-width: 61.27143em) {
+  @media screen and (min-width: 960px) {
     #index #intro {
       margin-top: 10%; } }
   #index #intro:after {
     content: "";
     display: table;
     clear: both; }
-  @media screen and (min-width: 61.27143em) {
+  @media screen and (min-width: 960px) {
     #index #intro > div,
     #index #intro .text-bubble {
       float: left; } }
   #index #intro .text-bubble-origin {
     margin: 0 auto; }
-    @media screen and (min-width: 61.27143em) {
+    @media screen and (min-width: 960px) {
       #index #intro .text-bubble-origin {
         margin: 56px 0 0 5px;
         -webkit-transform: rotate(-90deg);
@@ -832,7 +832,8 @@ blockquote {
         transform: rotate(-90deg); } }
   #index #intro .text-bubble {
     max-width: 18.5em;
-    padding: 0.2em; }
+    padding: 0.2em;
+    box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.07); }
     #index #intro .text-bubble > p {
       font-size: inherit;
       text-align: center;
@@ -860,10 +861,10 @@ blockquote {
     padding-left: 1em;
     padding-right: 1em;
     max-width: 34.28571em; }
-    @media screen and (min-width: 61.27143em) {
+    @media screen and (min-width: 960px) {
       #index #i-can > div {
         max-width: 68.57143em; } }
-    @media screen and (min-width: 61.27143em) {
+    @media screen and (min-width: 960px) {
       #index #i-can > div {
         max-width: 50em;
         margin: 0 auto; } }
@@ -873,7 +874,7 @@ blockquote {
   margin: 0 auto;
   text-align: center;
   max-width: 34.28571em; }
-  @media screen and (min-width: 61.27143em) {
+  @media screen and (min-width: 960px) {
     #index #projects > div {
       max-width: 68.57143em; } }
 #index #projects ul {
@@ -884,7 +885,7 @@ blockquote {
 #index #projects li {
   margin: 0 1em 10% 1em;
   max-width: 452px; }
-  @media screen and (min-width: 61.27143em) {
+  @media screen and (min-width: 960px) {
     #index #projects li {
       font-size: 14px;
       display: inline-block;
@@ -899,7 +900,7 @@ blockquote {
 #index #projects img {
   /* TODO Commented because of visual glitch
   @include transition(opacity 300ms ease 0s); */ }
-  @media screen and (min-width: 61.27143em) {
+  @media screen and (min-width: 960px) {
     #index #projects img:hover {
       opacity: 0.8; } }
 #index #projects p {
@@ -913,7 +914,7 @@ blockquote {
     margin: 0 auto;
     text-align: center;
     max-width: 34.28571em; }
-    @media screen and (min-width: 61.27143em) {
+    @media screen and (min-width: 960px) {
       #index #references > div {
         max-width: 68.57143em; } }
   #index #references ul {
@@ -925,7 +926,7 @@ blockquote {
     margin: 0 1em 10% 1em;
     max-width: 452px;
     vertical-align: top; }
-    @media screen and (min-width: 61.27143em) {
+    @media screen and (min-width: 960px) {
       #index #references li {
         font-size: 14px;
         display: inline-block;
@@ -943,7 +944,7 @@ blockquote {
     margin-left: 2em; }
   #index #references .text-bubble {
     padding: 0.3em 0.7em; }
-  @media screen and (min-width: 61.27143em) {
+  @media screen and (min-width: 960px) {
     #index #references footer {
       font-size: 16px; } }
 #index #experience > article,
@@ -953,11 +954,11 @@ blockquote {
   padding-left: 1em;
   padding-right: 1em;
   max-width: 34.28571em; }
-  @media screen and (min-width: 61.27143em) {
+  @media screen and (min-width: 960px) {
     #index #experience > article,
     #index #experience > div {
       max-width: 68.57143em; } }
-  @media screen and (min-width: 61.27143em) {
+  @media screen and (min-width: 960px) {
     #index #experience > article,
     #index #experience > div {
       max-width: 50em;
@@ -971,7 +972,7 @@ blockquote {
 #index .glyphicon-envelope {
   margin-right: 0.5em;
   font-size: 14px; }
-  @media screen and (min-width: 61.27143em) {
+  @media screen and (min-width: 960px) {
     #index .glyphicon-envelope {
       font-size: 16px; } }
 
@@ -981,7 +982,7 @@ blockquote {
   padding-left: 1em;
   padding-right: 1em;
   max-width: 68.57143em; }
-  @media screen and (min-width: 61.27143em) {
+  @media screen and (min-width: 960px) {
     #appear-showroom #content {
       max-width: 68.57143em; } }
 #appear-showroom #intro,
@@ -999,7 +1000,7 @@ blockquote {
   padding-left: 1em;
   padding-right: 1em;
   max-width: 68.57143em; }
-  @media screen and (min-width: 61.27143em) {
+  @media screen and (min-width: 960px) {
     #site-diary #content {
       max-width: 68.57143em; } }
 #site-diary #intro,
@@ -1019,7 +1020,7 @@ blockquote {
   padding-left: 1em;
   padding-right: 1em;
   max-width: 68.57143em; }
-  @media screen and (min-width: 61.27143em) {
+  @media screen and (min-width: 960px) {
     #train-damage #content {
       max-width: 68.57143em; } }
   #train-damage #content > div {
@@ -1037,7 +1038,7 @@ blockquote {
   display: inline-block;
   margin: 0 1em 1em 1em;
   width: 18.7em; }
-  @media screen and (min-width: 61.27143em) {
+  @media screen and (min-width: 960px) {
     #train-damage li {
       width: 17.3em; } }
 #train-damage .centered-contents {
