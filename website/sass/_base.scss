@@ -42,7 +42,7 @@ h2 {
 }
 
 h1 {
-  font-size: $font-size-h2;
+  font-size: ($font-size-h2 + $font-size-h3) / 2; // $font-size-h2 is a bit too big on small screen
 
   @include large-screen {
     font-size: $font-size-h1;

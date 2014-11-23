@@ -40,9 +40,18 @@ module.exports = function (grunt) {
             dist: {
                 src: [
                     // Libs
+                    "libs/h5bp/modernizr-custom.js",
+                    "libs/p.js",
+                    "libs/jquery-2.1.1.min.js",
                     "libs/fastclick.js",
+                    "libs/lodash.min.js",
+                    "libs/gsap/TweenLite.min.js",
+                    "libs/gsap/CSSPlugin.min.js",
+                    "libs/gsap/EasePack.min.js",
+                    "libs/jquery.visible.js",    // The minified version has bug https://github.com/customd/jquery-visible/issues/21
 
                     // Global
+                    "javascripts/global.js",
 
                     // Common
 
@@ -51,6 +60,8 @@ module.exports = function (grunt) {
                     // Models
 
                     // Controllers
+                    "javascripts/controllers/base.js",
+                    "javascripts/controllers/index.js"
 
                     // Templates
                 ],

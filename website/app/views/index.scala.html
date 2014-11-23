@@ -3,13 +3,13 @@
     Content
 -->
 <section id="intro" class="centered-contents">
-    <div class="me"></div><!--
- --><div class="text-bubble-origin"></div>
+    <div class="me"></div>
+    <div class="text-bubble-origin"></div>
     <h1 class="text-bubble"><p>Hi! I’m Christophe, an experienced web developer starting freelancing.</p>
         <p>Do you need help with your project?</p></h1>
 </section>
 
-<section id="i-can">
+<section id="i-can" class="hidden-before-bubble-animation">
     <h2>I can</h2>
 
     <div>
@@ -21,7 +21,7 @@
     </div>
 </section>
 
-<section id="projects" class="content-section">
+<section id="projects" class="content-section hidden-before-bubble-animation">
     <h2>Some projects I have worked on</h2>
 
     <div>
@@ -73,7 +73,7 @@
     </div>
 </section>
 
-<section id="references">
+<section id="references" class="hidden-before-bubble-animation">
     <h2>A few references</h2>
 
     <div>
@@ -97,16 +97,16 @@
     </div>
 </section>
 
-<p class="call-to-action">Get in touch!<br/>
+<p class="call-to-action hidden-before-bubble-animation">Get in touch!<br/>
     <a href="mailto:christophe@@8b.nu"><span class="glyphicon glyphicon-envelope"></span>christophe@@8b.nu</a>
 </p>
 
-<section id="experience" class="content-section">
+<section id="experience" class="content-section hidden-before-bubble-animation">
     <h2>I know these technologies</h2>
 
     <article>
         <h3>Frontend web</h3>
-        <p>JavaScript, jQuery, Spine.js, Backbone.js, AngularJS, HTML5, CSS3, Sass, Handlebars</p>
+        <p>JavaScript, jQuery, Spine.js, Backbone.js, Ember.js, AngularJS, HTML5, CSS3, Sass, Handlebars</p>
     </article>
 
     <article>
@@ -130,11 +130,18 @@
     </div>
 </section>
 
-<p class="call-to-action">Feel welcome to <a href="mailto:christophe@@8b.nu">contact me</a> if you have any
+<p class="call-to-action hidden-before-bubble-animation">Feel welcome to <a href="mailto:christophe@@8b.nu">contact me</a> if you have any
     question!</p>
 } {
 <!--
     Javascript
 -->
+<script type="text/javascript">
+    document.addEventListener("DOMContentLoaded", function () {
+        CBR.Controllers.Index({
+            el: "#content"
+        }).run();
+    });
+</script>
 
 }

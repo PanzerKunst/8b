@@ -10,6 +10,11 @@
 }
 
 #index {
+  .hidden-before-bubble-animation {
+    display: none;
+    opacity: 0;
+  }
+
   #intro {
     @include index-content;
 
@@ -46,15 +51,18 @@
 
       box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.07);
 
+      // For tween
+      display: none;
+
       > p {
         font-size: inherit;
         text-align: center;
         line-height: 1.25em;
 
-        margin: 0;
+        margin: 0 0 $paragraph-default-margin 0;
 
-        &:first-child {
-          margin-bottom: $paragraph-default-margin;
+        &:last-child {
+          margin: 0;
         }
       }
     }
