@@ -1054,10 +1054,6 @@ CBR.Controllers = CBR.Controllers || {};
     c.init = function (options) {
         this.options = options;
     };
-
-    c.getEl = function () {
-        return $(this.options.el);
-    };
 });;CBR.Controllers.Index = P(CBR.Controllers.Base, function (c, base) {
     c.animatedTextBubblesBelowTheFold = [];
     c.textBubblesBelowTheFoldToAnimateOnNextScroll = [];
