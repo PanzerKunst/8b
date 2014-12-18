@@ -72,7 +72,7 @@ module.exports = function (grunt) {
         sass: {
             build: {
                 files: {
-                    'public/<%= pkg.name %>.css': 'sass/main.scss'
+                    'public/<%= pkg.name %>.css': 'sass/<%= pkg.name %>.scss'
                 }
             }
         },
