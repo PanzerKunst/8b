@@ -34,7 +34,8 @@ CBR.Controllers.Index = P(CBR.Controllers.Base, function (c, base) {
     };
 
     c._animateTextBubblesBelowTheFold = function () {
-        this.textBubblesBelowTheFoldToAnimateOnNextScroll.forEach(function ($textBubble, index) {
+        // We need to clone otherwise we splice an array that we are traversing
+        this.textBubblesBelowTheFoldToAnimateOnNextScroll.clone().forEach(function ($textBubble, index) {
             var $footer = $textBubble.siblings("footer");
             if ($footer.visible()) {    // If the associated footer is fully visible
                 // We animate the text bubble after a split second
